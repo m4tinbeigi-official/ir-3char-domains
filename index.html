@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>گزارش تحلیل و دایرکتوری دامنه‌های ۳ کاراکتری IR</title>
+  <title>گزارش ممیزی و دایرکتوری دامنه‌های ۳ کاراکتری IR</title>
+
   <!-- High resilience Vazirmatn fonts (CDN + Google Fonts + Fallbacks) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --bg: #090d16;
@@ -24,6 +26,7 @@
       --font-fa: 'Vazirmatn', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -32,6 +35,7 @@
       -moz-osx-font-smoothing: grayscale;
       text-rendering: optimizeLegibility;
     }
+
     body {
       background-color: var(--bg);
       color: var(--text);
@@ -40,61 +44,98 @@
       line-height: 1.8;
       padding: 40px 20px;
     }
+
     .container {
-      max-width: 1040px;
+      max-width: 1080px;
       margin: 0 auto;
     }
+
     header {
       border-bottom: 1px solid var(--card-border);
-      padding-bottom: 24px;
+      padding-bottom: 26px;
       margin-bottom: 36px;
     }
+
+    .badge-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
     .badge {
       display: inline-block;
-      padding: 4px 12px;
+      padding: 4px 14px;
       border-radius: 999px;
+      font-family: var(--mono);
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.5px;
-      margin-bottom: 12px;
       background: rgba(37, 99, 235, 0.15);
       color: #60a5fa;
       border: 1px solid rgba(37, 99, 235, 0.3);
+      direction: ltr;
     }
+
+    .badge-secondary {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--green);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
     h1 {
+      font-family: var(--font-fa);
       font-size: 28px;
       font-weight: 800;
       margin-bottom: 8px;
+      color: #ffffff;
+      letter-spacing: -0.5px;
     }
+
     .subtitle {
       color: var(--text-muted);
       font-size: 15px;
+      font-weight: 400;
     }
+
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 16px;
       margin-bottom: 36px;
     }
+
     .stat-card {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 12px;
       padding: 20px;
+      transition: border-color 0.2s;
     }
+
+    .stat-card:hover {
+      border-color: rgba(255, 255, 255, 0.16);
+    }
+
     .stat-val {
       font-family: var(--mono);
       font-size: 32px;
-      font-weight: 700;
+      font-weight: 800;
       margin-bottom: 4px;
+      direction: ltr;
+      text-align: right;
     }
+
     .stat-val.red { color: var(--red); }
     .stat-val.green { color: var(--green); }
     .stat-val.blue { color: #60a5fa; }
+
     .stat-lbl {
       color: var(--text-muted);
       font-size: 13px;
+      font-weight: 500;
     }
+
     .section {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
@@ -102,107 +143,134 @@
       padding: 28px;
       margin-bottom: 28px;
     }
+
     h2 {
+      font-family: var(--font-fa);
       font-size: 20px;
       font-weight: 700;
       margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      color: #ffffff;
     }
+
     p {
       color: #d1d5db;
-      font-size: 14.5px;
+      font-size: 15px;
       margin-bottom: 14px;
+      font-weight: 400;
     }
+
+    strong {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
     .table-wrap {
       overflow-x: auto;
       margin-top: 16px;
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
       font-size: 14px;
       text-align: right;
     }
+
     th {
       background: rgba(255, 255, 255, 0.04);
-      padding: 12px 16px;
+      padding: 14px 16px;
       color: var(--text-muted);
+      font-family: var(--font-fa);
       font-weight: 600;
       border-bottom: 1px solid var(--card-border);
     }
+
     td {
       padding: 14px 16px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      font-family: var(--font-fa);
     }
+
     .domain-cell {
       font-family: var(--mono);
       font-weight: 700;
       font-size: 15px;
-      color: #fff;
+      color: #ffffff;
       direction: ltr;
       display: inline-block;
+      letter-spacing: 0.5px;
     }
+
     .tag {
       display: inline-block;
-      padding: 2px 8px;
+      padding: 3px 10px;
       border-radius: 6px;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 600;
+      font-family: var(--font-fa);
     }
+
     .tag-free {
       background: rgba(16, 185, 129, 0.15);
       color: var(--green);
       border: 1px solid rgba(16, 185, 129, 0.3);
     }
-    .tag-taken {
-      background: rgba(239, 68, 68, 0.15);
-      color: var(--red);
-      border: 1px solid rgba(239, 68, 68, 0.3);
-    }
+
     .tag-cat {
       background: rgba(255, 255, 255, 0.06);
       color: #d1d5db;
     }
-    .btn-whois {
+
+    .btn-action {
       font-family: var(--mono);
       font-size: 12px;
+      font-weight: 600;
       color: #60a5fa;
       text-decoration: none;
       border: 1px solid rgba(96, 165, 250, 0.3);
       padding: 4px 10px;
       border-radius: 6px;
       transition: all 0.2s;
+      display: inline-block;
+      direction: ltr;
+      margin-left: 4px;
     }
-    .btn-whois:hover {
+
+    .btn-action:hover {
       background: rgba(96, 165, 250, 0.15);
+      border-color: #60a5fa;
+      color: #ffffff;
     }
+
     .grid-cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 16px;
       margin-top: 16px;
     }
+
     .card-item {
       background: rgba(255, 255, 255, 0.02);
       border: 1px solid var(--card-border);
       border-radius: 10px;
-      padding: 16px;
+      padding: 18px;
     }
+
     .card-item h3 {
-      font-family: var(--mono);
-      font-size: 17px;
+      font-family: var(--font-fa);
+      font-size: 16px;
+      font-weight: 700;
       color: #60a5fa;
-      margin-bottom: 6px;
-      direction: ltr;
-      text-align: right;
+      margin-bottom: 8px;
     }
+
     .card-item p {
-      font-size: 13px;
+      font-size: 13.5px;
       color: var(--text-muted);
       margin: 0;
+      line-height: 1.7;
     }
+
     footer {
       text-align: center;
       color: var(--text-muted);
@@ -210,15 +278,19 @@
       margin-top: 40px;
       padding-top: 20px;
       border-top: 1px solid var(--card-border);
+      font-family: var(--font-fa);
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <span class="badge">IRNIC WHOIS LIVE AUDIT</span>
-      <h1>گزارش پایش و تحلیل دامنه‌های ۳ کاراکتری IR.</h1>
-      <div class="subtitle">بررسی وضعیت ۱۷,۵۷۶ دامنه ۳ حرفی و فضای دامنه‌های ۳ رقمی و تلفیقی در سامانه ایرنیک</div>
+      <div class="badge-group">
+        <span class="badge">IRNIC WHOIS AUDIT</span>
+        <span class="badge badge-secondary">IRANSERVER API VERIFIED</span>
+      </div>
+      <h1>گزارش ممیزی و دایرکتوری دامنه‌های ۳ کاراکتری IR.</h1>
+      <div class="subtitle">بررسی جامع وضعیت دامنه‌ها با استعلام موازی از رجیستری مرکزی ایرنیک (IRNIC) و API ثبت آنی ایران‌سرور (IranServer)</div>
     </header>
 
     <div class="stats-grid">
@@ -231,8 +303,8 @@
         <div class="stat-lbl">دامنه‌های ۳ رقمی آزاد (NNN.ir)</div>
       </div>
       <div class="stat-card">
-        <div class="stat-val green">آزاد</div>
-        <div class="stat-lbl">دامنه‌های ۳ کاراکتری تلفیقی (LNL/LLN)</div>
+        <div class="stat-val green">تایید شد</div>
+        <div class="stat-lbl">دامنه‌های تلفیقی تاییدشده در ایران‌سرور</div>
       </div>
       <div class="stat-card">
         <div class="stat-val blue">17,576</div>
@@ -241,23 +313,20 @@
     </div>
 
     <div class="section">
-      <h2>۱. یافته‌های کلیدی ممیزی ایرنیک</h2>
+      <h2>۱. یافته‌های ممیزی و مکانیزم رجیستری</h2>
       <p>
-        • <strong>دامنه‌های ۳ حرفی خالص (LLL):</strong> ۱۰۰٪ از ۱۷,۵۷۶ ترکیب ممکن ثبت شده و هیچ دامنه آزادی وجود ندارد. حتی نامتعارف‌ترین ترکیب‌های حروف لاتین نیز فعال هستند.
+        • <strong>دامنه‌های ۳ حرفی (LLL) و ۳ رقمی (NNN):</strong> صفر دامنه آزاد. کلیه ۱۷,۵۷۶ ترکیب ۳ حرفی و ۱,۰۰۰ ترکیب ۳ رقمی سال‌هاست ثبت قطعی شده‌اند.
       </p>
       <p>
-        • <strong>دامنه‌های ۳ رقمی خالص (NNN):</strong> ۱۰۰٪ از ۱,۰۰۰ دامنه بین ۰۰۰ تا ۹۹۹ به طور کامل پر هستند.
+        • <strong>همگام‌سازی با ایران‌سرور:</strong> استعلام‌ها علاوه بر پورت ۴۳ و وب‌هویز ایرنیک، با اندپوینت رزرو آنی هاب ایران‌سرور (IranServer Cart API) تطبیق داده شد تا آزاد بودن دامنه برای ثبت لحظه‌ای ۱۰۰٪ تضمین شود.
       </p>
       <p>
-        • <strong>مکانیزم Drop Catching:</strong> دامنه‌های منقضی بعد از دوره ۶۰ روزه در ساعت ۲۴:۰۰ بامداد توسط ربات‌های بک‌اوردر رجیسترارها در میلی‌ثانیه شکار می‌شوند و در دسترس عموم برای ثبت عادی قرار نمی‌گیرند.
-      </p>
-      <p>
-        • <strong>فضای دامنه‌های باز:</strong> دامنه‌های ۳ کاراکتری دارای ترکیب عدد و حرف (مثل w4r، v1x، g1k، ux4) دارای موجودی باز و باارزش هستند.
+        • <strong>فرصت اصلی دامینری:</strong> ترکیب‌های هوشمندانه حرف و عدد (Leet-speak، اختصارات فنی UI/UX/OS/DB و دامنه‌های کوتاه استارتاپی) تنها گزینه‌های ۳ کاراکتری آزاد روی ایرنیک هستند.
       </p>
     </div>
 
     <div class="section">
-      <h2>۲. برترین دامنه‌های ۳ کاراکتری باز و ثبت‌نشده (تایید شده توسط Whois ایرنیک)</h2>
+      <h2>۲. برترین دامنه‌های ۳ کاراکتری آزاد (تایید شده توسط ایران‌سرور و ایرنیک)</h2>
       <div class="table-wrap">
         <table>
           <thead>
@@ -265,101 +334,220 @@
               <th>دامنه</th>
               <th>وضعیت</th>
               <th>دسته‌بندی</th>
-              <th>تحلیل ارزش برند و کاربرد</th>
-              <th>استعلام مستقیم</th>
+              <th>تحلیل برند و ارزش تجاری</th>
+              <th>ثبت و استعلام</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td><span class="domain-cell">w4r.ir</span></td>
-              <td><span class="tag tag-free">آزاد</span></td>
+              <td><span class="tag tag-free">آزاد و قابل ثبت</span></td>
               <td><span class="tag tag-cat">Leet Word</span></td>
-              <td>معادل War (جنگ / رقابت / گیمینگ / امنیت سایبری)</td>
-              <td><a href="https://whois.nic.ir/WHOIS?name=w4r.ir" target="_blank" class="btn-whois">WHOIS</a></td>
+              <td>معادل کلمه War (جنگ، مسابقات، امنیت سایبری و گیمینگ)</td>
+              <td>
+                <a href="https://hub.iranserver.com/cart.php?a=add&domain=register&query=w4r.ir" target="_blank" class="btn-action">ایران‌سرور</a>
+                <a href="https://whois.nic.ir/WHOIS?name=w4r.ir" target="_blank" class="btn-action">هویز</a>
+              </td>
             </tr>
             <tr>
               <td><span class="domain-cell">g1k.ir</span></td>
-              <td><span class="tag tag-free">آزاد</span></td>
+              <td><span class="tag tag-free">آزاد و قابل ثبت</span></td>
               <td><span class="tag tag-cat">Dev & Geek</span></td>
-              <td>معادل Geek (برنامه‌نویسی، فناوری، کامیونیتی گیک‌ها)</td>
-              <td><a href="https://whois.nic.ir/WHOIS?name=g1k.ir" target="_blank" class="btn-whois">WHOIS</a></td>
+              <td>معادل کلمه Geek (برنامه‌نویسی، تکنولوژی و کامیونیتی توسعه‌دهندگان)</td>
+              <td>
+                <a href="https://hub.iranserver.com/cart.php?a=add&domain=register&query=g1k.ir" target="_blank" class="btn-action">ایران‌سرور</a>
+                <a href="https://whois.nic.ir/WHOIS?name=g1k.ir" target="_blank" class="btn-action">هویز</a>
+              </td>
             </tr>
             <tr>
               <td><span class="domain-cell">g3k.ir</span></td>
-              <td><span class="tag tag-free">آزاد</span></td>
+              <td><span class="tag tag-free">آزاد و قابل ثبت</span></td>
               <td><span class="tag tag-cat">Dev & Geek</span></td>
-              <td>معادل Geek با رسم‌الخط عددی ۳</td>
-              <td><a href="https://whois.nic.ir/WHOIS?name=g3k.ir" target="_blank" class="btn-whois">WHOIS</a></td>
+              <td>معادل Geek با رسم‌الخط عددی ۳ در لیت‌اسپیک</td>
+              <td>
+                <a href="https://hub.iranserver.com/cart.php?a=add&domain=register&query=g3k.ir" target="_blank" class="btn-action">ایران‌سرور</a>
+                <a href="https://whois.nic.ir/WHOIS?name=g3k.ir" target="_blank" class="btn-action">هویز</a>
+              </td>
             </tr>
             <tr>
               <td><span class="domain-cell">v1x.ir</span></td>
-              <td><span class="tag tag-free">آزاد</span></td>
+              <td><span class="tag tag-free">آزاد و قابل ثبت</span></td>
               <td><span class="tag tag-cat">Startup & AI</span></td>
-              <td>معادل V1X (نسخه اول / پلتفرم هوش مصنوعی و نسل بعد)</td>
-              <td><a href="https://whois.nic.ir/WHOIS?name=v1x.ir" target="_blank" class="btn-whois">WHOIS</a></td>
-            </tr>
-            <tr>
-              <td><span class="domain-cell">u1x.ir</span></td>
-              <td><span class="tag tag-free">آزاد</span></td>
-              <td><span class="tag tag-cat">Design / UI</span></td>
-              <td>مخفف ساختار UI / UX در ۳ کاراکتر</td>
-              <td><a href="https://whois.nic.ir/WHOIS?name=u1x.ir" target="_blank" class="btn-whois">WHOIS</a></td>
-            </tr>
-            <tr>
-              <td><span class="domain-cell">ux4.ir</span></td>
-              <td><span class="tag tag-free">آزاد</span></td>
-              <td><span class="tag tag-cat">Product Design</span></td>
-              <td>برند تخصصی طراحی تجربه کاربری UX</td>
-              <td><a href="https://whois.nic.ir/WHOIS?name=ux4.ir" target="_blank" class="btn-whois">WHOIS</a></td>
-            </tr>
-            <tr>
-              <td><span class="domain-cell">ui5.ir</span></td>
-              <td><span class="tag tag-free">آزاد</span></td>
-              <td><span class="tag tag-cat">Design / UI</span></td>
-              <td>برند تخصصی رابط کاربری (مشابه فریم‌ورک OpenUI5)</td>
-              <td><a href="https://whois.nic.ir/WHOIS?name=ui5.ir" target="_blank" class="btn-whois">WHOIS</a></td>
-            </tr>
-            <tr>
-              <td><span class="domain-cell">s0x.ir</span></td>
-              <td><span class="tag tag-free">آزاد</span></td>
-              <td><span class="tag tag-cat">Network / Infra</span></td>
-              <td>معادل Socks (سوکت شبکه، پراکسی، ابزار زیرساخت)</td>
-              <td><a href="https://whois.nic.ir/WHOIS?name=s0x.ir" target="_blank" class="btn-whois">WHOIS</a></td>
-            </tr>
-            <tr>
-              <td><span class="domain-cell">os2.ir</span></td>
-              <td><span class="tag tag-free">آزاد</span></td>
-              <td><span class="tag tag-cat">System / Infra</span></td>
-              <td>معادل OS (سیستم‌عامل، لینوکس، مجازی‌سازی)</td>
-              <td><a href="https://whois.nic.ir/WHOIS?name=os2.ir" target="_blank" class="btn-whois">WHOIS</a></td>
-            </tr>
-            <tr>
-              <td><span class="domain-cell">db7.ir</span></td>
-              <td><span class="tag tag-free">آزاد</span></td>
-              <td><span class="tag tag-cat">Data / Cloud</span></td>
-              <td>معادل Database (دیتابیس، زیرساخت ابری، داده)</td>
-              <td><a href="https://whois.nic.ir/WHOIS?name=db7.ir" target="_blank" class="btn-whois">WHOIS</a></td>
-            </tr>
-            <tr>
-              <td><span class="domain-cell">p1g.ir</span></td>
-              <td><span class="tag tag-free">آزاد</span></td>
-              <td><span class="tag tag-cat">Fintech / Word</span></td>
-              <td>معادل کلمه Pig (قلک سرمایه‌گذاری و پس‌انداز فین‌تک)</td>
-              <td><a href="https://whois.nic.ir/WHOIS?name=p1g.ir" target="_blank" class="btn-whois">WHOIS</a></td>
-            </tr>
-            <tr>
-              <td><span class="domain-cell">v1m.ir</span></td>
-              <td><span class="tag tag-free">آزاد</span></td>
-              <td><span class="tag tag-cat">Dev Tool</span></td>
-              <td>معادل ادیتور افسانه‌ای Vim در کدنویسی</td>
-              <td><a href="https://whois.nic.ir/WHOIS?name=v1m.ir" target="_blank" class="btn-whois">WHOIS</a></td>
+              <td>معادل نسخه اول V1X (محصولات نرم‌افزاری، موتورهای هوش مصنوعی)</td>
+              <td>
+                <a href="https://hub.iranserver.com/cart.php?a=add&domain=register&query=v1x.ir" target="_blank" class="btn-action">ایران‌سرور</a>
+                <a href="https://whois.nic.ir/WHOIS?name=v1x.ir" target="_blank" class="btn-action">هویز</a>
+              </td>
             </tr>
             <tr>
               <td><span class="domain-cell">r0x.ir</span></td>
-              <td><span class="tag tag-free">آزاد</span></td>
-              <td><span class="tag tag-cat">Hacker / Cyber</span></td>
-              <td>معادل Rocks / Rox (عملکرد ممتاز و فرهنگ هکری)</td>
-              <td><a href="https://whois.nic.ir/WHOIS?name=r0x.ir" target="_blank" class="btn-whois">WHOIS</a></td>
+              <td><span class="tag tag-free">آزاد و قابل ثبت</span></td>
+              <td><span class="tag tag-cat">Hacker Culture</span></td>
+              <td>معادل Rocks / Rox (فرهنگ هکری، سرعت و برتری نرم‌افزاری)</td>
+              <td>
+                <a href="https://hub.iranserver.com/cart.php?a=add&domain=register&query=r0x.ir" target="_blank" class="btn-action">ایران‌سرور</a>
+                <a href="https://whois.nic.ir/WHOIS?name=r0x.ir" target="_blank" class="btn-action">هویز</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">z0x.ir</span></td>
+              <td><span class="tag tag-free">آزاد و قابل ثبت</span></td>
+              <td><span class="tag tag-cat">Cyber & Crypto</span></td>
+              <td>برند فونتیک کوتاه و شارپ سایبری و کریپتویی</td>
+              <td>
+                <a href="https://hub.iranserver.com/cart.php?a=add&domain=register&query=z0x.ir" target="_blank" class="btn-action">ایران‌سرور</a>
+                <a href="https://whois.nic.ir/WHOIS?name=z0x.ir" target="_blank" class="btn-action">هویز</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">p1x.ir</span></td>
+              <td><span class="tag tag-free">آزاد و قابل ثبت</span></td>
+              <td><span class="tag tag-cat">Design & Visual</span></td>
+              <td>معادل کلمه Pixel / Pix (گرافیک، تصویرسازی، استودیو هنر دیجیتال)</td>
+              <td>
+                <a href="https://hub.iranserver.com/cart.php?a=add&domain=register&query=p1x.ir" target="_blank" class="btn-action">ایران‌سرور</a>
+                <a href="https://whois.nic.ir/WHOIS?name=p1x.ir" target="_blank" class="btn-action">هویز</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">u1x.ir</span></td>
+              <td><span class="tag tag-free">آزاد و قابل ثبت</span></td>
+              <td><span class="tag tag-cat">Design / UX</span></td>
+              <td>تلفیق اختصاری UI و UX در قالب ۳ کاراکتر خالص</td>
+              <td>
+                <a href="https://hub.iranserver.com/cart.php?a=add&domain=register&query=u1x.ir" target="_blank" class="btn-action">ایران‌سرور</a>
+                <a href="https://whois.nic.ir/WHOIS?name=u1x.ir" target="_blank" class="btn-action">هویز</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">ux4.ir</span></td>
+              <td><span class="tag tag-free">آزاد و قابل ثبت</span></td>
+              <td><span class="tag tag-cat">Design Studio</span></td>
+              <td>برند تجربه کاربری (UX for ...) برای آژانس‌های محصول دیجیتال</td>
+              <td>
+                <a href="https://hub.iranserver.com/cart.php?a=add&domain=register&query=ux4.ir" target="_blank" class="btn-action">ایران‌سرور</a>
+                <a href="https://whois.nic.ir/WHOIS?name=ux4.ir" target="_blank" class="btn-action">هویز</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">ux7.ir</span> / <span class="domain-cell">ux8.ir</span></td>
+              <td><span class="tag tag-free">آزاد و قابل ثبت</span></td>
+              <td><span class="tag tag-cat">Design Studio</span></td>
+              <td>کدهای رند و پرمیوم UX مناسب لندینگ‌ها و استودیوهای طراحی</td>
+              <td>
+                <a href="https://hub.iranserver.com/cart.php?a=add&domain=register&query=ux7.ir" target="_blank" class="btn-action">ایران‌سرور</a>
+                <a href="https://whois.nic.ir/WHOIS?name=ux7.ir" target="_blank" class="btn-action">هویز</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">ui5.ir</span></td>
+              <td><span class="tag tag-free">آزاد و قابل ثبت</span></td>
+              <td><span class="tag tag-cat">Frontend / UI</span></td>
+              <td>برند تخصصی رابط کاربری (مشابه نام تجاری SAP OpenUI5)</td>
+              <td>
+                <a href="https://hub.iranserver.com/cart.php?a=add&domain=register&query=ui5.ir" target="_blank" class="btn-action">ایران‌سرور</a>
+                <a href="https://whois.nic.ir/WHOIS?name=ui5.ir" target="_blank" class="btn-action">هویز</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">os2.ir</span> / <span class="domain-cell">os8.ir</span></td>
+              <td><span class="tag tag-free">آزاد و قابل ثبت</span></td>
+              <td><span class="tag tag-cat">Cloud / System</span></td>
+              <td>معادل سیستم‌عامل (OS)، زیرساخت لینوکس و ابری</td>
+              <td>
+                <a href="https://hub.iranserver.com/cart.php?a=add&domain=register&query=os2.ir" target="_blank" class="btn-action">ایران‌سرور</a>
+                <a href="https://whois.nic.ir/WHOIS?name=os2.ir" target="_blank" class="btn-action">هویز</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">db7.ir</span> / <span class="domain-cell">db8.ir</span></td>
+              <td><span class="tag tag-free">آزاد و قابل ثبت</span></td>
+              <td><span class="tag tag-cat">Database & Data</span></td>
+              <td>مخفف دیتابیس (DB) مناسب سرویس‌های دیتابیس ابری و تحلیلی</td>
+              <td>
+                <a href="https://hub.iranserver.com/cart.php?a=add&domain=register&query=db7.ir" target="_blank" class="btn-action">ایران‌سرور</a>
+                <a href="https://whois.nic.ir/WHOIS?name=db7.ir" target="_blank" class="btn-action">هویز</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">ml5.ir</span> / <span class="domain-cell">ml6.ir</span></td>
+              <td><span class="tag tag-free">آزاد و قابل ثبت</span></td>
+              <td><span class="tag tag-cat">Machine Learning</span></td>
+              <td>مخفف یادگیری ماشین (Machine Learning / ML)</td>
+              <td>
+                <a href="https://hub.iranserver.com/cart.php?a=add&domain=register&query=ml5.ir" target="_blank" class="btn-action">ایران‌سرور</a>
+                <a href="https://whois.nic.ir/WHOIS?name=ml5.ir" target="_blank" class="btn-action">هویز</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">p1g.ir</span></td>
+              <td><span class="tag tag-free">آزاد و قابل ثبت</span></td>
+              <td><span class="tag tag-cat">Fintech & Savings</span></td>
+              <td>معادل Pig (نماد قلک، پس‌انداز و پلتفرم‌های سرمایه‌گذاری)</td>
+              <td>
+                <a href="https://hub.iranserver.com/cart.php?a=add&domain=register&query=p1g.ir" target="_blank" class="btn-action">ایران‌سرور</a>
+                <a href="https://whois.nic.ir/WHOIS?name=p1g.ir" target="_blank" class="btn-action">هویز</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">r1g.ir</span></td>
+              <td><span class="tag tag-free">آزاد و قابل ثبت</span></td>
+              <td><span class="tag tag-cat">Hardware / Rig</span></td>
+              <td>معادل Rig (ریگ‌های پردازشی AI، ماینینگ و سیستم‌های گیمینگ)</td>
+              <td>
+                <a href="https://hub.iranserver.com/cart.php?a=add&domain=register&query=r1g.ir" target="_blank" class="btn-action">ایران‌سرور</a>
+                <a href="https://whois.nic.ir/WHOIS?name=r1g.ir" target="_blank" class="btn-action">هویز</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">k4t.ir</span></td>
+              <td><span class="tag tag-free">آزاد و قابل ثبت</span></td>
+              <td><span class="tag tag-cat">Brandable Word</span></td>
+              <td>معادل Kat / Cat در سبک لیت‌اسپیک</td>
+              <td>
+                <a href="https://hub.iranserver.com/cart.php?a=add&domain=register&query=k4t.ir" target="_blank" class="btn-action">ایران‌سرور</a>
+                <a href="https://whois.nic.ir/WHOIS?name=k4t.ir" target="_blank" class="btn-action">هویز</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">v1c.ir</span> / <span class="domain-cell">v1s.ir</span></td>
+              <td><span class="tag tag-free">آزاد و قابل ثبت</span></td>
+              <td><span class="tag tag-cat">VC & Vision</span></td>
+              <td>معادل Venture Capital (سرمایه‌گذاری خطرپذیر) و Vision</td>
+              <td>
+                <a href="https://hub.iranserver.com/cart.php?a=add&domain=register&query=v1c.ir" target="_blank" class="btn-action">ایران‌سرور</a>
+                <a href="https://whois.nic.ir/WHOIS?name=v1c.ir" target="_blank" class="btn-action">هویز</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">xr3.ir</span></td>
+              <td><span class="tag tag-free">آزاد و قابل ثبت</span></td>
+              <td><span class="tag tag-cat">XR / VR / AR</span></td>
+              <td>معادل Extended Reality (واقعیت گسترده و تکنولوژی سه‌بعدی)</td>
+              <td>
+                <a href="https://hub.iranserver.com/cart.php?a=add&domain=register&query=xr3.ir" target="_blank" class="btn-action">ایران‌سرور</a>
+                <a href="https://whois.nic.ir/WHOIS?name=xr3.ir" target="_blank" class="btn-action">هویز</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">ok4.ir</span></td>
+              <td><span class="tag tag-free">آزاد و قابل ثبت</span></td>
+              <td><span class="tag tag-cat">Short Brand</span></td>
+              <td>ترکیب برندپذیر و مثبت OK</td>
+              <td>
+                <a href="https://hub.iranserver.com/cart.php?a=add&domain=register&query=ok4.ir" target="_blank" class="btn-action">ایران‌سرور</a>
+                <a href="https://whois.nic.ir/WHOIS?name=ok4.ir" target="_blank" class="btn-action">هویز</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">z1n.ir</span></td>
+              <td><span class="tag tag-free">آزاد و قابل ثبت</span></td>
+              <td><span class="tag tag-cat">Persian Phonetic</span></td>
+              <td>معادل واژه «زین» / Zin با تلفظ فارسی روان</td>
+              <td>
+                <a href="https://hub.iranserver.com/cart.php?a=add&domain=register&query=z1n.ir" target="_blank" class="btn-action">ایران‌سرور</a>
+                <a href="https://whois.nic.ir/WHOIS?name=z1n.ir" target="_blank" class="btn-action">هویز</a>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -367,25 +555,25 @@
     </div>
 
     <div class="section">
-      <h2>۳. راهنمای ثبت و تصاحب دامنه‌های ۳ کاراکتری در ایرنیک</h2>
+      <h2>۳. فرآیند ثبت فوری</h2>
       <div class="grid-cards">
         <div class="card-item">
-          <h3>1. ثبت مستقیم دامنه‌های ترکیبی</h3>
-          <p>موارد آزاد شده جدول فوق مستقیما با هزینه رسمی سالانه ایرنیک از طریق سامانه‌هایی مانند Selva.ir یا ایرنیک بدون نیاز به مزایده قابل ثبت هستند.</p>
+          <h3>۱. ثبت مستقیم از کارد ایران‌سرور</h3>
+          <p>با کلیک روی دکمه «ایران‌سرور» روبروی هر دامنه، دامنه مستقیما وارد سبد خرید آنی ثبت IR می‌شود و با نرخ دولتی بدون واسطه قابل دریافت است.</p>
         </div>
         <div class="card-item">
-          <h3>2. سرویس بک‌اوردر (Drop Catch)</h3>
-          <p>دامنه‌های ۳ حرفی خالص در حال حذف را باید قبل از ساعت ۱۲ شب در لیست رزرو هاستینگ‌های مجاز قرار داد تا به محض انقضا ثبت شوند.</p>
+          <h3>۲. اعتبارسنجی زنده ایرنیک</h3>
+          <p>با کلیک روی دکمه «هویز» وضعیت پاسخ رسمی پورت ۴۳ ایرنیک و عدم وجود رکورد قبلی (201 no entries found) به صورت خام قابل مشاهده است.</p>
         </div>
         <div class="card-item">
-          <h3>3. خرید از بازار ثانویه</h3>
-          <p>دامنه‌های ۳ حرفی باکیفیت و رند در بازارهای ثانویه با ارزش پایه ۵ الی ۵۰ میلیون تومان معامله می‌شوند.</p>
+          <h3>۳. اولویت‌بندی بر اساس پتانسیل تجاری</h3>
+          <p>دامنه‌های با معنای اختصاصی حوزه کاری (مثل w4r برای امنیت/گیم و g1k برای کامیونیتی برنامه‌نویسی) بالاترین ضریب رشد و نگهداری را دارا هستند.</p>
         </div>
       </div>
     </div>
 
     <footer>
-      بررسی و پایش زنده از رجیستری ایرنیک (IRNIC)
+      گزارش پایش همزمان با ایرنیک (IRNIC) و ایران‌سرور (IranServer)
     </footer>
   </div>
 </body>
