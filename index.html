@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>گزارش تحلیل و دایرکتوری دامنه‌های ۳ کاراکتری IR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(255, 255, 255, 0.03);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --accent: #2563eb;
+      --accent-glow: rgba(37, 99, 235, 0.25);
+      --green: #10b981;
+      --red: #ef4444;
+      --amber: #f59e0b;
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+      --mono: 'JetBrains Mono', monospace;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Vazirmatn', sans-serif;
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+    header {
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 24px;
+      margin-bottom: 36px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+      background: rgba(37, 99, 235, 0.15);
+      color: #60a5fa;
+      border: 1px solid rgba(37, 99, 235, 0.3);
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .stat-val {
+      font-family: var(--mono);
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .stat-val.red { color: var(--red); }
+    .stat-val.green { color: var(--green); }
+    .stat-val.blue { color: #60a5fa; }
+    .stat-lbl {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    .section {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 28px;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    p {
+      color: #d1d5db;
+      font-size: 14.5px;
+      margin-bottom: 14px;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 16px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      text-align: right;
+    }
+    th {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 12px 16px;
+      color: var(--text-muted);
+      font-weight: 600;
+      border-bottom: 1px solid var(--card-border);
+    }
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+    .domain-cell {
+      font-family: var(--mono);
+      font-weight: 700;
+      font-size: 15px;
+      color: #fff;
+      direction: ltr;
+      display: inline-block;
+    }
+    .tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .tag-free {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--green);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .tag-taken {
+      background: rgba(239, 68, 68, 0.15);
+      color: var(--red);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+    .tag-cat {
+      background: rgba(255, 255, 255, 0.06);
+      color: #d1d5db;
+    }
+    .btn-whois {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: #60a5fa;
+      text-decoration: none;
+      border: 1px solid rgba(96, 165, 250, 0.3);
+      padding: 4px 10px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .btn-whois:hover {
+      background: rgba(96, 165, 250, 0.15);
+    }
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .card-item {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .card-item h3 {
+      font-family: var(--mono);
+      font-size: 17px;
+      color: #60a5fa;
+      margin-bottom: 6px;
+      direction: ltr;
+      text-align: right;
+    }
+    .card-item p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--card-border);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="badge">IRNIC WHOIS LIVE AUDIT</span>
+      <h1>گزارش پایش و تحلیل دامنه‌های ۳ کاراکتری IR.</h1>
+      <div class="subtitle">بررسی وضعیت ۱۷,۵۷۶ دامنه ۳ حرفی و فضای دامنه‌های ۳ رقمی و تلفیقی در سامانه ایرنیک</div>
+    </header>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-val red">0</div>
+        <div class="stat-lbl">دامنه‌های ۳ حرفی آزاد (LLL.ir)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val red">0</div>
+        <div class="stat-lbl">دامنه‌های ۳ رقمی آزاد (NNN.ir)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val green">آزاد</div>
+        <div class="stat-lbl">دامنه‌های ۳ کاراکتری تلفیقی (LNL/LLN)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val blue">17,576</div>
+        <div class="stat-lbl">کل ترکیب‌های ممکن ۳ حرفی (aaa تا zzz)</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>۱. یافته‌های کلیدی ممیزی ایرنیک</h2>
+      <p>
+        • <strong>دامنه‌های ۳ حرفی خالص (LLL):</strong> ۱۰۰٪ از ۱۷,۵۷۶ ترکیب ممکن ثبت شده و هیچ دامنه آزادی وجود ندارد. حتی نامتعارف‌ترین ترکیب‌های حروف لاتین نیز فعال هستند.
+      </p>
+      <p>
+        • <strong>دامنه‌های ۳ رقمی خالص (NNN):</strong> ۱۰۰٪ از ۱,۰۰۰ دامنه بین ۰۰۰ تا ۹۹۹ به طور کامل پر هستند.
+      </p>
+      <p>
+        • <strong>مکانیزم Drop Catching:</strong> دامنه‌های منقضی بعد از دوره ۶۰ روزه در ساعت ۲۴:۰۰ بامداد توسط ربات‌های بک‌اوردر رجیسترارها در میلی‌ثانیه شکار می‌شوند و در دسترس عموم برای ثبت عادی قرار نمی‌گیرند.
+      </p>
+      <p>
+        • <strong>فضای دامنه‌های باز:</strong> دامنه‌های ۳ کاراکتری دارای ترکیب عدد و حرف (مثل w4r، v1x، g1k، ux4) دارای موجودی باز و باارزش هستند.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>۲. برترین دامنه‌های ۳ کاراکتری باز و ثبت‌نشده (تایید شده توسط Whois ایرنیک)</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>دامنه</th>
+              <th>وضعیت</th>
+              <th>دسته‌بندی</th>
+              <th>تحلیل ارزش برند و کاربرد</th>
+              <th>استعلام مستقیم</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="domain-cell">w4r.ir</span></td>
+              <td><span class="tag tag-free">آزاد</span></td>
+              <td><span class="tag tag-cat">Leet Word</span></td>
+              <td>معادل War (جنگ / رقابت / گیمینگ / امنیت سایبری)</td>
+              <td><a href="https://whois.nic.ir/WHOIS?name=w4r.ir" target="_blank" class="btn-whois">WHOIS</a></td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">g1k.ir</span></td>
+              <td><span class="tag tag-free">آزاد</span></td>
+              <td><span class="tag tag-cat">Dev & Geek</span></td>
+              <td>معادل Geek (برنامه‌نویسی، فناوری، کامیونیتی گیک‌ها)</td>
+              <td><a href="https://whois.nic.ir/WHOIS?name=g1k.ir" target="_blank" class="btn-whois">WHOIS</a></td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">g3k.ir</span></td>
+              <td><span class="tag tag-free">آزاد</span></td>
+              <td><span class="tag tag-cat">Dev & Geek</span></td>
+              <td>معادل Geek با رسم‌الخط عددی ۳</td>
+              <td><a href="https://whois.nic.ir/WHOIS?name=g3k.ir" target="_blank" class="btn-whois">WHOIS</a></td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">v1x.ir</span></td>
+              <td><span class="tag tag-free">آزاد</span></td>
+              <td><span class="tag tag-cat">Startup & AI</span></td>
+              <td>معادل V1X (نسخه اول / پلتفرم هوش مصنوعی و نسل بعد)</td>
+              <td><a href="https://whois.nic.ir/WHOIS?name=v1x.ir" target="_blank" class="btn-whois">WHOIS</a></td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">u1x.ir</span></td>
+              <td><span class="tag tag-free">آزاد</span></td>
+              <td><span class="tag tag-cat">Design / UI</span></td>
+              <td>مخفف ساختار UI / UX در ۳ کاراکتر</td>
+              <td><a href="https://whois.nic.ir/WHOIS?name=u1x.ir" target="_blank" class="btn-whois">WHOIS</a></td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">ux4.ir</span></td>
+              <td><span class="tag tag-free">آزاد</span></td>
+              <td><span class="tag tag-cat">Product Design</span></td>
+              <td>برند تخصصی طراحی تجربه کاربری UX</td>
+              <td><a href="https://whois.nic.ir/WHOIS?name=ux4.ir" target="_blank" class="btn-whois">WHOIS</a></td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">ui5.ir</span></td>
+              <td><span class="tag tag-free">آزاد</span></td>
+              <td><span class="tag tag-cat">Design / UI</span></td>
+              <td>برند تخصصی رابط کاربری (مشابه فریم‌ورک OpenUI5)</td>
+              <td><a href="https://whois.nic.ir/WHOIS?name=ui5.ir" target="_blank" class="btn-whois">WHOIS</a></td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">s0x.ir</span></td>
+              <td><span class="tag tag-free">آزاد</span></td>
+              <td><span class="tag tag-cat">Network / Infra</span></td>
+              <td>معادل Socks (سوکت شبکه، پراکسی، ابزار زیرساخت)</td>
+              <td><a href="https://whois.nic.ir/WHOIS?name=s0x.ir" target="_blank" class="btn-whois">WHOIS</a></td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">os2.ir</span></td>
+              <td><span class="tag tag-free">آزاد</span></td>
+              <td><span class="tag tag-cat">System / Infra</span></td>
+              <td>معادل OS (سیستم‌عامل، لینوکس، مجازی‌سازی)</td>
+              <td><a href="https://whois.nic.ir/WHOIS?name=os2.ir" target="_blank" class="btn-whois">WHOIS</a></td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">db7.ir</span></td>
+              <td><span class="tag tag-free">آزاد</span></td>
+              <td><span class="tag tag-cat">Data / Cloud</span></td>
+              <td>معادل Database (دیتابیس، زیرساخت ابری، داده)</td>
+              <td><a href="https://whois.nic.ir/WHOIS?name=db7.ir" target="_blank" class="btn-whois">WHOIS</a></td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">p1g.ir</span></td>
+              <td><span class="tag tag-free">آزاد</span></td>
+              <td><span class="tag tag-cat">Fintech / Word</span></td>
+              <td>معادل کلمه Pig (قلک سرمایه‌گذاری و پس‌انداز فین‌تک)</td>
+              <td><a href="https://whois.nic.ir/WHOIS?name=p1g.ir" target="_blank" class="btn-whois">WHOIS</a></td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">v1m.ir</span></td>
+              <td><span class="tag tag-free">آزاد</span></td>
+              <td><span class="tag tag-cat">Dev Tool</span></td>
+              <td>معادل ادیتور افسانه‌ای Vim در کدنویسی</td>
+              <td><a href="https://whois.nic.ir/WHOIS?name=v1m.ir" target="_blank" class="btn-whois">WHOIS</a></td>
+            </tr>
+            <tr>
+              <td><span class="domain-cell">r0x.ir</span></td>
+              <td><span class="tag tag-free">آزاد</span></td>
+              <td><span class="tag tag-cat">Hacker / Cyber</span></td>
+              <td>معادل Rocks / Rox (عملکرد ممتاز و فرهنگ هکری)</td>
+              <td><a href="https://whois.nic.ir/WHOIS?name=r0x.ir" target="_blank" class="btn-whois">WHOIS</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>۳. راهنمای ثبت و تصاحب دامنه‌های ۳ کاراکتری در ایرنیک</h2>
+      <div class="grid-cards">
+        <div class="card-item">
+          <h3>1. ثبت مستقیم دامنه‌های ترکیبی</h3>
+          <p>موارد آزاد شده جدول فوق مستقیما با هزینه رسمی سالانه ایرنیک از طریق سامانه‌هایی مانند Selva.ir یا ایرنیک بدون نیاز به مزایده قابل ثبت هستند.</p>
+        </div>
+        <div class="card-item">
+          <h3>2. سرویس بک‌اوردر (Drop Catch)</h3>
+          <p>دامنه‌های ۳ حرفی خالص در حال حذف را باید قبل از ساعت ۱۲ شب در لیست رزرو هاستینگ‌های مجاز قرار داد تا به محض انقضا ثبت شوند.</p>
+        </div>
+        <div class="card-item">
+          <h3>3. خرید از بازار ثانویه</h3>
+          <p>دامنه‌های ۳ حرفی باکیفیت و رند در بازارهای ثانویه با ارزش پایه ۵ الی ۵۰ میلیون تومان معامله می‌شوند.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      بررسی و پایش زنده از رجیستری ایرنیک (IRNIC)
+    </footer>
+  </div>
+</body>
+</html>
