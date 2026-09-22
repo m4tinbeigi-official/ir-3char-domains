@@ -83,6 +83,12 @@
       border: 1px solid rgba(16, 185, 129, 0.3);
     }
 
+    .badge-amber {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
     h1 {
       font-family: var(--font-fa);
       font-size: 28px;
@@ -100,7 +106,7 @@
 
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 16px;
       margin-bottom: 36px;
     }
@@ -119,7 +125,7 @@
 
     .stat-val {
       font-family: var(--mono);
-      font-size: 32px;
+      font-size: 30px;
       font-weight: 800;
       margin-bottom: 4px;
       direction: ltr;
@@ -129,6 +135,7 @@
     .stat-val.red { color: var(--red); }
     .stat-val.green { color: var(--green); }
     .stat-val.blue { color: #60a5fa; }
+    .stat-val.amber { color: #fbbf24; }
 
     .stat-lbl {
       color: var(--text-muted);
@@ -162,6 +169,36 @@
     strong {
       color: #ffffff;
       font-weight: 700;
+    }
+
+    .pattern-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .pattern-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    .pattern-title {
+      font-family: var(--mono);
+      font-size: 14px;
+      font-weight: 700;
+      color: #60a5fa;
+      direction: ltr;
+      text-align: right;
+      margin-bottom: 4px;
+    }
+
+    .pattern-desc {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
     }
 
     .table-wrap {
@@ -288,45 +325,67 @@
       <div class="badge-group">
         <span class="badge">IRNIC WHOIS AUDIT</span>
         <span class="badge badge-secondary">IRANSERVER API VERIFIED</span>
+        <span class="badge badge-amber">46,656 UNIVERSE AUDIT</span>
       </div>
-      <h1>گزارش ممیزی و دایرکتوری دامنه‌های ۳ کاراکتری IR.</h1>
-      <div class="subtitle">بررسی جامع وضعیت دامنه‌ها با استعلام موازی از رجیستری مرکزی ایرنیک (IRNIC) و API ثبت آنی ایران‌سرور (IranServer)</div>
+      <h1>گزارش جامع ممیزی و وضعیت دامنه‌های ۳ کاراکتری IR.</h1>
+      <div class="subtitle">ممیزی ساختار ۴۶,۶۵۶ حالت ممکن سه کاراکتری با تطبیق همزمان رجیستری ایرنیک و سیستم ثبت ایران‌سرور</div>
     </header>
 
     <div class="stats-grid">
       <div class="stat-card">
         <div class="stat-val red">0</div>
-        <div class="stat-lbl">دامنه‌های ۳ حرفی آزاد (LLL.ir)</div>
+        <div class="stat-lbl">دامنه‌های ۳ حرفی آزاد (LLL.ir از ۱۷,۵۷۶)</div>
       </div>
       <div class="stat-card">
         <div class="stat-val red">0</div>
-        <div class="stat-lbl">دامنه‌های ۳ رقمی آزاد (NNN.ir)</div>
+        <div class="stat-lbl">دامنه‌های ۳ رقمی آزاد (NNN.ir از ۱,۰۰۰)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val blue">46,656</div>
+        <div class="stat-lbl">کل فضای دامنه‌های ۳ کاراکتری (36^3)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val amber">28,080</div>
+        <div class="stat-lbl">فضای دامنه‌های تلفیقی حرف و عدد</div>
       </div>
       <div class="stat-card">
         <div class="stat-val green">تایید شد</div>
-        <div class="stat-lbl">دامنه‌های تلفیقی تاییدشده در ایران‌سرور</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-val blue">17,576</div>
-        <div class="stat-lbl">کل ترکیب‌های ممکن ۳ حرفی (aaa تا zzz)</div>
+        <div class="stat-lbl">موجودی باز با استعلام ایران‌سرور</div>
       </div>
     </div>
 
     <div class="section">
-      <h2>۱. یافته‌های ممیزی و مکانیزم رجیستری</h2>
+      <h2>۱. معماری آماری فضای دامنه‌های ۳ کاراکتری (کل ۴۶,۶۵۶ ترکیب)</h2>
       <p>
-        • <strong>دامنه‌های ۳ حرفی (LLL) و ۳ رقمی (NNN):</strong> صفر دامنه آزاد. کلیه ۱۷,۵۷۶ ترکیب ۳ حرفی و ۱,۰۰۰ ترکیب ۳ رقمی سال‌هاست ثبت قطعی شده‌اند.
+        فضای اسمی سه کاراکتری در پسوند ملی ir شامل کاراکترهای لاتین (a تا z) و ارقام (0 تا 9) در مجموع شامل <strong>۴۶,۶۵۶ حالت</strong> است که در ۸ الگوی ساختاری تفکیک می‌شوند:
       </p>
-      <p>
-        • <strong>همگام‌سازی با ایران‌سرور:</strong> استعلام‌ها علاوه بر پورت ۴۳ و وب‌هویز ایرنیک، با اندپوینت رزرو آنی هاب ایران‌سرور (IranServer Cart API) تطبیق داده شد تا آزاد بودن دامنه برای ثبت لحظه‌ای ۱۰۰٪ تضمین شود.
-      </p>
-      <p>
-        • <strong>فرصت اصلی دامینری:</strong> ترکیب‌های هوشمندانه حرف و عدد (Leet-speak، اختصارات فنی UI/UX/OS/DB و دامنه‌های کوتاه استارتاپی) تنها گزینه‌های ۳ کاراکتری آزاد روی ایرنیک هستند.
+
+      <div class="pattern-grid">
+        <div class="pattern-card">
+          <div class="pattern-title">LLL (17,576 ترکیب)</div>
+          <div class="pattern-desc">حروف سه‌گانه خالص. ۱۰۰٪ پر است و صفر دامنه آزاد دارد.</div>
+        </div>
+        <div class="pattern-card">
+          <div class="pattern-title">NNN (1,000 ترکیب)</div>
+          <div class="pattern-desc">ارقام سه‌گانه خالص (000 تا 999). ۱۰۰٪ پر است و صفر دامنه آزاد دارد.</div>
+        </div>
+        <div class="pattern-card">
+          <div class="pattern-title">LLN / LNL / NLL (20,280 ترکیب)</div>
+          <div class="pattern-desc">۲ حرف + ۱ رقم (هر الگو ۶,۷۶۰ حالت). کلمات لیت‌اسپیک مثل w4r، برندهای AI مثل v1x و ux4 در این بخش آزادند.</div>
+        </div>
+        <div class="pattern-card">
+          <div class="pattern-title">LNN / NLN / NNL (7,800 ترکیب)</div>
+          <div class="pattern-desc">۱ حرف + ۲ رقم (هر الگو ۲,۶۰۰ حالت). کدهای رند مثل x10 و os2 در این بخش در دسترس هستند.</div>
+        </div>
+      </div>
+
+      <p style="margin-top: 14px;">
+        • <strong>پوشش ممیزی انجام‌شده:</strong> تمامی ۱۷,۵۷۶ دامنه ۳ حرفی و ۱,۰۰۰ دامنه ۳ رقمی به صورت کامل اعتبارسنجی شدند. در بخش دامنه‌های تلفیقی (۲۸,۰۸۰ دامنه)، استعلام هدفمند روی پرتقاضاترین کلمات لیت‌اسپیک، اصطلاحات دولوپری، هوش مصنوعی، فین‌تک و طراحی تجربه کاربری صورت گرفت و موارد فعال در سبد خرید ایران‌سرور ثبت و لیست شدند.
       </p>
     </div>
 
     <div class="section">
-      <h2>۲. برترین دامنه‌های ۳ کاراکتری آزاد (تایید شده توسط ایران‌سرور و ایرنیک)</h2>
+      <h2>۲. برترین دامنه‌های ۳ کاراکتری آزاد و در دسترس (تایید شده توسط ایران‌سرور و ایرنیک)</h2>
       <div class="table-wrap">
         <table>
           <thead>
@@ -555,19 +614,19 @@
     </div>
 
     <div class="section">
-      <h2>۳. فرآیند ثبت فوری</h2>
+      <h2>۳. راهنمای ثبت و تصاحب آنی</h2>
       <div class="grid-cards">
         <div class="card-item">
-          <h3>۱. ثبت مستقیم از کارد ایران‌سرور</h3>
-          <p>با کلیک روی دکمه «ایران‌سرور» روبروی هر دامنه، دامنه مستقیما وارد سبد خرید آنی ثبت IR می‌شود و با نرخ دولتی بدون واسطه قابل دریافت است.</p>
+          <h3>۱. رزرو آنی در ایران‌سرور</h3>
+          <p>با زدن دکمه «ایران‌سرور»، دامنه مستقیما وارد کارت خرید شده و با اتصال به درگاه رسمی و شناسه کاربری نیک به نام خریدار ثبت قطعی می‌شود.</p>
         </div>
         <div class="card-item">
-          <h3>۲. اعتبارسنجی زنده ایرنیک</h3>
-          <p>با کلیک روی دکمه «هویز» وضعیت پاسخ رسمی پورت ۴۳ ایرنیک و عدم وجود رکورد قبلی (201 no entries found) به صورت خام قابل مشاهده است.</p>
+          <h3>۲. استعلام مستقیم از رجیستری</h3>
+          <p>با کلیک روی «هویز»، استعلام رسمی مستقیم از پورت ۴۳ و موتور رجیستری ایرنیک باز شده تا وضعیت عدم ثبت قبلی اعتبارسنجی گردد.</p>
         </div>
         <div class="card-item">
-          <h3>۳. اولویت‌بندی بر اساس پتانسیل تجاری</h3>
-          <p>دامنه‌های با معنای اختصاصی حوزه کاری (مثل w4r برای امنیت/گیم و g1k برای کامیونیتی برنامه‌نویسی) بالاترین ضریب رشد و نگهداری را دارا هستند.</p>
+          <h3>۳. رصد دامنه‌های منقضی (Drop Catch)</h3>
+          <p>برای دامنه‌های ۳ حرفی پر (LLL)، تنها راه ثبت تنظیم درخواست بک‌اوردر قبل از ساعت ۱۲ شب انقضای دامنه‌هاست.</p>
         </div>
       </div>
     </div>
