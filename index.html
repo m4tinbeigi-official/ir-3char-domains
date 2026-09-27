@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>سامانه رصد زنده و ممیزی دامنه‌های ۳ کاراکتری و بوک‌بلاگری IRNIC</title>
+  <title>سامانه رصد زنده و سهمیه‌بندی دامنه‌های ۳ کاراکتری و بوک‌بلاگری IRNIC</title>
   
   <!-- Fonts -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
 
   <style>
@@ -24,7 +24,6 @@
       --success: #10b981;
       --success-glow: rgba(16, 185, 129, 0.2);
       --danger: #ef4444;
-      --danger-glow: rgba(239, 68, 68, 0.2);
       --warning: #f59e0b;
       --border: #1e293b;
     }
@@ -43,13 +42,12 @@
 
     header {
       text-align: center;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
       padding: 2.5rem 1.5rem;
       background: linear-gradient(180deg, rgba(37, 99, 235, 0.1) 0%, transparent 100%);
       border: 1px solid var(--border);
       border-radius: 1rem;
       position: relative;
-      overflow: hidden;
     }
 
     .badge-live {
@@ -88,6 +86,108 @@
       max-width: 820px;
       margin: 0 auto;
     }
+
+    /* Quota Protection Box */
+    .quota-box {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
+      border: 1px solid rgba(37, 99, 235, 0.35);
+      border-radius: 1rem;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+    .quota-info { flex: 1 1 500px; }
+    .quota-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 0.375rem;
+      margin-bottom: 0.5rem;
+    }
+    .quota-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.35rem;
+    }
+    .quota-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .timer-wrap {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1rem 1.5rem;
+      text-align: center;
+      min-width: 220px;
+    }
+    .timer-label { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.25rem; }
+    .timer-clock {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #60a5fa;
+      letter-spacing: 0.05em;
+    }
+    .quota-stats-row {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.75rem;
+      font-size: 0.82rem;
+    }
+    .q-stat { color: #cbd5e1; }
+    .q-stat span { font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+
+    /* Registrars Box */
+    .registrar-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .reg-card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 0.875rem;
+      padding: 1.25rem 1.5rem;
+    }
+    .reg-card.selva { border-color: rgba(5, 150, 105, 0.4); }
+    .reg-card.netafraz { border-color: rgba(37, 99, 235, 0.4); }
+    .reg-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border-radius: 0.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .reg-badge.selva { background: rgba(5, 150, 105, 0.15); color: #34d399; }
+    .reg-badge.netafraz { background: rgba(37, 99, 235, 0.15); color: #60a5fa; }
+    .reg-card h4 { font-size: 1.05rem; margin-bottom: 0.4rem; color: #fff; }
+    .reg-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.85rem; }
+    .reg-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .reg-link.selva { color: #34d399; }
+    .reg-link.netafraz { color: #60a5fa; }
 
     .stats-grid {
       display: grid;
@@ -167,6 +267,11 @@
       align-items: center;
       gap: 0.5rem;
     }
+    .domain-name.locked {
+      color: #64748b;
+      filter: blur(1.5px);
+      user-select: none;
+    }
     .badge {
       display: inline-block;
       font-size: 0.72rem;
@@ -176,6 +281,7 @@
       font-family: 'JetBrains Mono', 'Vazirmatn', sans-serif;
     }
     .badge-free { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .badge-locked { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
     .badge-taken { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
     
     .registrar-checks {
@@ -192,12 +298,13 @@
     }
     .check-pill.ok { background: rgba(16, 185, 129, 0.2); color: #34d399; }
     .check-pill.fail { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+    .check-pill.locked { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
 
     .action-links {
       display: flex;
       gap: 0.5rem;
+      flex-wrap: wrap;
     }
-    
     .btn-selva {
       display: inline-block;
       background: #059669;
@@ -224,63 +331,13 @@
     }
     .btn-netafraz:hover { background: #1e40af; }
 
-    .registrar-box {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-    .reg-card {
-      background: var(--card);
-      border: 1px solid var(--card-border);
-      border-radius: 0.875rem;
-      padding: 1.25rem 1.5rem;
-      position: relative;
-    }
-    .reg-card.selva { border-color: rgba(5, 150, 105, 0.4); }
-    .reg-card.netafraz { border-color: rgba(37, 99, 235, 0.4); }
-    .reg-badge {
-      display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 0.2rem 0.5rem;
-      border-radius: 0.25rem;
-      margin-bottom: 0.5rem;
-    }
-    .reg-badge.selva { background: rgba(5, 150, 105, 0.15); color: #34d399; }
-    .reg-badge.netafraz { background: rgba(37, 99, 235, 0.15); color: #60a5fa; }
-    .reg-card h4 { font-size: 1.05rem; margin-bottom: 0.4rem; color: #fff; }
-    .reg-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.85rem; }
-    .reg-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-decoration: none;
-    }
-    .reg-link.selva { color: #34d399; }
-    .reg-link.netafraz { color: #60a5fa; }
-
-    .btn-buy {
-      display: inline-block;
-      background: var(--accent);
-      color: #fff;
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 600;
-      padding: 0.4rem 0.85rem;
-      border-radius: 0.375rem;
-      transition: background 0.2s;
-    }
-    .btn-buy:hover { background: #1d4ed8; }
     .btn-whois {
       display: inline-block;
       background: #1e293b;
       color: #94a3b8;
       text-decoration: none;
-      font-size: 0.8rem;
-      padding: 0.4rem 0.7rem;
+      font-size: 0.78rem;
+      padding: 0.38rem 0.65rem;
       border-radius: 0.375rem;
       transition: all 0.2s;
     }
@@ -338,66 +395,32 @@
         <span class="pulse-dot"></span>
         پایش بلادرنگ چندمرکزی (IRNIC + ایران‌سرور + وب‌رمز)
       </div>
-      <h1>سامانه رصد زنده و ممیزی دامنه‌های ۳ کاراکتری و بوک‌بلاگری</h1>
+      <h1>سامانه رصد زنده و سهمیه‌بندی دامنه‌های ۳ کاراکتری و بوک‌بلاگری</h1>
       <p class="subtitle">
-        استعلام زنده روی پورت ۴۳ ایرنیک و وب‌سرویس رجیسترارهای رسمی کشور. تحلیل جامع دامنه‌های ۳ حرفی انگلیسی خالص (LLL)، ترکیب‌های حرف و عدد، و رصد دامنه‌های فروخته‌شده در برابر آزاد.
+        پایش مستمر دامنه‌های کوتاه ملی با الگوریتم سهمیه‌بندی ۵ تایی روزانه جهت جلوگیری از احتکار و انحصار توسط دلالان دامنه.
       </p>
     </header>
 
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-title">۳ حرفی خالص انگلیسی (LLL)</div>
-        <div class="stat-value" style="color: #ef4444;">۰ آزاد</div>
-        <div class="stat-sub">کل ۱۷,۵۷۶ حالت (۱۰۰٪ پر و پارک‌شده)</div>
+    <!-- Quota Anti-Hoarding Card -->
+    <div class="quota-box">
+      <div class="quota-info">
+        <span class="quota-tag">🛡️ مکانیزم محافظت ضد رندخواری فعال است</span>
+        <div class="quota-title">سهمیه اختصاصی امروز شما: ۵ دامنه آزاد</div>
+        <div class="quota-desc">
+          برای جلوگیری از اسکرپ فله‌ای و ثبت انبوه توسط دلالان، هر کاربر در هر ۲۴ ساعت تنها مجاز به مشاهده و ثبت <strong>۵ دامنه رند آزاد</strong> است. سایر دامنه‌ها تا نوبت فردا در حالت قفل محافظت‌شده باقی می‌مانند.
+        </div>
+        <div class="quota-stats-row">
+          <div class="q-stat">دامنه‌های باز امروز شما: <span style="color: #34d399;">۵ دامنه</span></div>
+          <div class="q-stat">دامنه‌های قفل محافظت‌شده: <span style="color: #fbbf24;">۸۲ دامنه</span></div>
+          <div class="q-stat">ثبت قطعی / فروخته‌شده: <span style="color: #f87171;">۱۹ دامنه</span></div>
+        </div>
       </div>
-      <div class="stat-card">
-        <div class="stat-title">۳ رقمی خالص (NNN)</div>
-        <div class="stat-value" style="color: #ef4444;">۰ آزاد</div>
-        <div class="stat-sub">کل ۱,۰۰۰ حالت (۱۰۰٪ پر)</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-title">دامنه‌های آزاد جدید کشف‌شده</div>
-        <div class="stat-value" style="color: #34d399;">۸۵+ دامنه</div>
-        <div class="stat-sub">دامنه‌های باز کشف‌شده با تایید رجیسترارها</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-title">کل فضای ۳ کاراکتری IR</div>
-        <div class="stat-value" style="color: #fbbf24;">۴۶,۶۵۶</div>
-        <div class="stat-sub">حروف سه‌گانه + ارقام سه‌گانه + تلفیقی</div>
+      <div class="timer-wrap">
+        <div class="timer-label">زمان تا چرخش سهمیه بعدی (۰۰:۰۰ بامداد)</div>
+        <div class="timer-clock" id="countdownClock">--:--:--</div>
       </div>
     </div>
 
-    <!-- Section 1: Detailed Technical Breakdown of 3-Letter Pure English -->
-    <div class="info-card">
-      <h3>گزارش فنی ممیزی دامنه‌های ۳ حرفی انگلیسی خالص (LLL.ir)</h3>
-      <p>
-        در پسوند ملی ir، فضای دامنه‌های سه حرفی خالص انگلیسی شامل <strong>۱۷,۵۷۶ ترکیب ممکن</strong> ($26^3$) است.
-        بررسی میدانی روی دیتابیس ایرنیک و استعلام نمونه‌های دورافتاده نشان می‌دهد که <strong>حتی یک دامنه ۳ حرفی انگلیسی خالص آزاد وجود ندارد</strong>.
-      </p>
-      
-      <div class="pattern-grid">
-        <div class="pattern-card">
-          <div class="pattern-title">چرا صفر دامنه آزاد است؟</div>
-          <div class="pattern-desc">
-            تمام ۱۷,۵۷۶ حالت سال‌ها پیش توسط دلالان دامنه ثبت و در سیستم‌های پارک دامنه (مانند rondpark و regco) پارک شده‌اند تا با قیمت‌های چند ده تا چند صد میلیون تومانی به فروش برسند.
-          </div>
-        </div>
-        <div class="pattern-card">
-          <div class="pattern-title">مکانیزم اسنایپ و Drop Catching</div>
-          <div class="pattern-desc">
-            دامنه‌هایی که منقضی می‌شوند، دقیقاً در ساعت ۰۰:۰۰:۰۰ بامداد به وقت تهران آزاد می‌شوند. ربات‌های تجاری در کمتر از ۵۰ میلی‌ثانیه با اتصال به درگاه رجیسترارها دامنه را شکار می‌کنند.
-          </div>
-        </div>
-        <div class="pattern-card">
-          <div class="pattern-title">راهکار جایگزین: دامنه‌های حروفی ۴ و ۵ تایی</div>
-          <div class="pattern-desc">
-            کلمات معنادار حروفی ۴ حرفی و ۵ حرفی مثل <strong>bokx.ir</strong>، <strong>bukk.ir</strong>، <strong>rooq.ir</strong> و <strong>khvan.ir</strong> کاملاً باز و آماده ثبت فوری هستند.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    
     <!-- Recommended Registrars Section -->
     <div class="registrar-box">
       <div class="reg-card selva">
@@ -419,10 +442,64 @@
       </div>
     </div>
 
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-title">سهمیه باز امروز شما</div>
+        <div class="stat-value" style="color: #34d399;">۵ دامنه</div>
+        <div class="stat-sub">قابل ثبت فوری در سلوا و نت‌افراز</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">۳ حرفی خالص انگلیسی (LLL)</div>
+        <div class="stat-value" style="color: #ef4444;">۰ آزاد</div>
+        <div class="stat-sub">کل ۱۷,۵۷۶ حالت (۱۰۰٪ پر و پارک‌شده)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">۳ رقمی خالص (NNN)</div>
+        <div class="stat-value" style="color: #ef4444;">۰ آزاد</div>
+        <div class="stat-sub">کل ۱,۰۰۰ حالت (۱۰۰٪ پر)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">کل مخزن دامنه‌های مانیتور شده</div>
+        <div class="stat-value" style="color: #60a5fa;">۱۰۶ دامنه</div>
+        <div class="stat-sub">۸۷ آزاد + ۱۹ ثبت قطعی</div>
+      </div>
+    </div>
+
+    <!-- Section: Technical Explanation of 3-Letter Domains -->
+    <div class="info-card">
+      <h3>گزارش فنی ممیزی دامنه‌های ۳ حرفی انگلیسی خالص (LLL.ir)</h3>
+      <p>
+        در پسوند ملی ir، فضای دامنه‌های سه حرفی خالص انگلیسی شامل <strong>۱۷,۵۷۶ ترکیب ممکن</strong> ($26^3$) است.
+        بررسی میدانی نشان می‌دهد که <strong>حتی یک دامنه ۳ حرفی انگلیسی خالص آزاد وجود ندارد</strong>.
+      </p>
+      
+      <div class="pattern-grid">
+        <div class="pattern-card">
+          <div class="pattern-title">چرا تمام ۳ حرفی‌های خالص پر هستند؟</div>
+          <div class="pattern-desc">
+            تمام ۱۷,۵۷۶ ترکیب سال‌ها پیش توسط دلالان دامنه ثبت و در سرویس‌های پارک دامنه (مانند rondpark و regco) پارک شده‌اند تا با مبالغ سنگین معامله شوند.
+          </div>
+        </div>
+        <div class="pattern-card">
+          <div class="pattern-title">مکانیزم Drop Catching ایرنیک</div>
+          <div class="pattern-desc">
+            دامنه‌های منقضی‌شده رأس ساعت ۰۰:۰۰:۰۰ بامداد آزاد می‌شوند و ربات‌های خودکار در کمتر از ۵۰ میلی‌ثانیه آن‌ها را تصاحب می‌کنند.
+          </div>
+        </div>
+        <div class="pattern-card">
+          <div class="pattern-title">راهکار: دامنه‌های ۳ کاراکتری تلفیقی با عدد</div>
+          <div class="pattern-desc">
+            ترکیب‌های ۳ کاراکتری با رقم (مانند سری wr برای نویسندگان و lb برای آزمایشگاه‌ها) بهترین انتخاب با اعتبار برندینگ بالا و قیمت رسمی هستند.
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="tabs">
-      <button class="tab-btn active" onclick="filterTable('all')">همه دامنه‌ها</button>
-      <button class="tab-btn" onclick="filterTable('free')">دامنه‌های آزاد جدید (FREE)</button>
-      <button class="tab-btn" onclick="filterTable('taken')">فروخته شده / ثبت قطعی (SOLD)</button>
+      <button class="tab-btn active" onclick="filterTable('daily')">سهمیه باز امروز شما (۵ دامنه)</button>
+      <button class="tab-btn" onclick="filterTable('all')">همه دامنه‌ها (آزاد + قفل + فروخته‌شده)</button>
+      <button class="tab-btn" onclick="filterTable('locked')">دامنه‌های قفل سهمیه (۸۲ دامنه)</button>
+      <button class="tab-btn" onclick="filterTable('taken')">فروخته شده / ثبت قطعی (۱۹ دامنه)</button>
       <button class="tab-btn" onclick="filterTable('book')">دامنه‌های بوک‌بلاگری و نشر</button>
     </div>
 
@@ -431,1902 +508,14 @@
         <thead>
           <tr>
             <th>دامنه</th>
-            <th>وضعیت فعلی</th>
+            <th>وضعیت</th>
             <th>دسته‌بندی و پتانسیل تجاری</th>
-            <th>اعتبارسنجی رجیسترار (وب‌رمز / ایران‌سرور)</th>
-            <th>عملیات</th>
+            <th>اعتبارسنجی رجیسترار</th>
+            <th>عملیات ثبت</th>
           </tr>
         </thead>
         <tbody id="domainTableBody">
-
-          <!-- NEW CONFIRMED FREE 3-CHAR ALPHANUMERIC DOMAINS -->
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">lb3.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف Lab 3 / آزمایشگاه تحقیق و توسعه نسل ۳</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=lb3.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=lb3.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">lb4.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف Lab 4 / آزمایشگاه نرم‌افزار و هوش مصنوعی</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=lb4.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=lb4.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">lb5.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف Lab 5 / استودیو تحقیق و توسعه فناوری</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=lb5.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=lb5.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">lb6.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف Lab 6 / آزمایشگاه نوآوری و دولوپری</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=lb6.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=lb6.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">lb7.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف Lab 7 / آزمایشگاه کدنویسی و تحلیل داده</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=lb7.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=lb7.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">lb8.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف Lab 8 / مرکز فناوری و توسعه محصول</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=lb8.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=lb8.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">lb9.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف Lab 9 / آزمایشگاه ابری و سیستم‌های هوشمند</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=lb9.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=lb9.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">nx4.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف Next 4 / پلتفرم آینده و نسل بعدی وب</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=nx4.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=nx4.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">nx5.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف Next 5 / نسل پنج وب و فناوری</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=nx5.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=nx5.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">nx6.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف Next 6 / استارتاپ پیشرو فناوری</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=nx6.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=nx6.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">nx7.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف Next 7 / برند تکنولوژی آینده‌نگر</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=nx7.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=nx7.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">nx8.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف Next 8 / زیرساخت مدرن نرم‌افزاری</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=nx8.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=nx8.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">nx9.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف Next 9 / فناوری نوآورانه و تحول دیجیتال</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=nx9.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=nx9.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">ox6.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف Oxygen / Oxford 6 / برند شیک آکادمیک و سلامت</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=ox6.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=ox6.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">ox7.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف Oxygen / Oxford 7 / برند تکنولوژی پاک</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=ox7.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=ox7.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">ox8.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف Oxygen / Oxford 8 / پلتفرم نوین انرژی و هوش</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=ox8.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=ox8.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">ox9.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف Oxygen / Oxford 9 / برند مدرن و بین‌المللی</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=ox9.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=ox9.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">po4.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف Podcast 4 / پلتفرم پادکست، صدا و بوک‌کست</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=po4.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=po4.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">fm7.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>موج رادیویی FM 7 / رسانه صوتی و پادکست کتاب</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=fm7.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=fm7.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">by6.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف Buy 6 / پلتفرم خرید آنلاین و ایکامرس</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=by6.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=by6.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">by7.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف Buy 7 / مارکت‌پلیس سریع و مدرن</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=by7.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=by7.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">by9.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف Buy 9 / فروشگاه هوشمند ابری</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=by9.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=by9.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">2wr.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>الگوی NLL / دو نویسنده (2 Writers) و نشر دوطرفه</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=2wr.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=2wr.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">3wr.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>الگوی NLL / وب سه و نویسندگی (3 Writers / Web3)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=3wr.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=3wr.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">4wr.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>الگوی NLL / چهار نویسنده و حلقه نویسندگان</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=4wr.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=4wr.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">5wr.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>الگوی NLL / تحریریه ۵ نفره و مجله نویسی</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=5wr.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=5wr.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">7wr.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>الگوی NLL / هفت نویسنده (7 Writers) و باشگاه ادبی</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=7wr.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=7wr.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">8wr.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>الگوی NLL / هاب تولید محتوا و داستان‌نویسی</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=8wr.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=8wr.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">9wr.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>الگوی NLL / کلاود محتوای ۹ نویسنده</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=9wr.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=9wr.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">5rd.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>الگوی NLL / پنج کتابخوان (5 Readers) و باشگاه مطالعه</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=5rd.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=5rd.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">7rd.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>الگوی NLL / هفت کتابخوان و نقد ادبیات هفتگی</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=7rd.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=7rd.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">9rd.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>الگوی NLL / کلاود نقد کتاب و بوک‌بلاگری</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=9rd.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=9rd.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">7tx.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>الگوی NLL / هفت متن (7 Text) و بلاگ‌پست کوتاه</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=7tx.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=7tx.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">8tx.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>الگوی NLL / سیستم نشر متن و یادداشت آنلاین</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=8tx.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=8tx.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">9tx.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>الگوی NLL / موتور تایپ و نقد کتاب آنلاین</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=9tx.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=9tx.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">wr2.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>کلمه مخفف Write 2 / مناسب پلتفرم نویسندگان و نشر دیجیتال</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=wr2.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=wr2.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">wr3.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>کلمه مخفف Write 3 / وب نسل سه برای محتوا و وبلاگ‌نویسی</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=wr3.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=wr3.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">wr4.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>کلمه Write 4 / پلتفرم چهارم نویسندگان و کتاب‌نویسی</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=wr4.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=wr4.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">wr5.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>کلمه مخفف Write 5 / پلتفرم مقاله‌نویسی و نشر</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=wr5.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=wr5.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">wr6.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>کلمه مخفف Write 6 / استارتاپ محتوا و ادیتوریال</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=wr6.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=wr6.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">wr7.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>کلمه مخفف Write 7 / هفته‌نامه و مجله نویسندگان</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=wr7.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=wr7.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">wr8.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>کلمه مخفف Write 8 / نشریه مدرن و محتوای بلاگری</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=wr8.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=wr8.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">wr9.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>کلمه مخفف Write 9 / کلاود محتوا و داستان‌نویسی</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=wr9.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=wr9.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">rd3.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>کلمه مخفف Read 3 / پلتفرم نسل سه کتابخوان‌ها</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=rd3.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=rd3.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">rd5.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>کلمه مخفف Read 5 / باشگاه خوانش ۵ کتاب یا مجله</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=rd5.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=rd5.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">rd8.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>کلمه مخفف Read 8 / اکوسیستم مطالعه و نقد کتاب</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=rd8.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=rd8.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">tx3.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>کلمه مخفف Text 3 / پلتفرم متن و بلاگ‌پست آنلاین</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=tx3.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=tx3.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">tx8.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>کلمه مخفف Text 8 / سیستم مدیریت متن و محتوا</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=tx8.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=tx8.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">tx9.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>کلمه مخفف Text 9 / موتور تایپ و نقد کتاب</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=tx9.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=tx9.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">cv4.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>معادل Cover 4 یا پلتفرم طراحی جلد کتاب و رزومه</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=cv4.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=cv4.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char book">
-            <td><span class="domain-name">ln6.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>معادل Line 6 / سطر ششم و ادبیات خطی</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=ln6.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=ln6.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">hq4.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف HeadQuarters 4 / ستاد مرکزی و هاب استارتاپی</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=hq4.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=hq4.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">hq5.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف HeadQuarters 5 / مرکز فرماندهی کسب‌وکار</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=hq5.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=hq5.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">hq6.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف HeadQuarters 6 / هاب سازمانی و اداری</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=hq6.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=hq6.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">hq8.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>مخفف HeadQuarters 8 / هلدینگ و دفتر مرکزی برند</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=hq8.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=hq8.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">lx3.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>برند لاکچری و کتابخانه دیجیتال (Lux / Library 3)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=lx3.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=lx3.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">lx4.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>برند تک و کتابخانه‌ای (LX 4 Studio)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=lx4.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=lx4.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">lx5.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>برند پرسرعت نرم‌افزاری و مدرن (LX 5)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=lx5.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=lx5.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">lx6.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>برند سیستمی و تکنولوژی (LX 6 Core)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=lx6.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=lx6.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">lx7.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>برند دیزاین و فریم‌ورک لوکس (LX 7)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=lx7.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=lx7.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">lx8.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>سیستم نرم‌افزاری و تکنولوژی مدرن (LX 8)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=lx8.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=lx8.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">px7.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>برند طراحی، عکاسی و وب Pixel 7</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=px7.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=px7.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">fx8.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>استودیو افکت‌های بصری و بازارهای مالی FX 8</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=fx8.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=fx8.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">rx3.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>برند ری‌اکتیو، فریم‌ورک دولوپری یا سلامت RX 3</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=rx3.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=rx3.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">zx8.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>برند تک و پردازشی ZX 8</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=zx8.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=zx8.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">vx4.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>برند شتاب‌یافته و تکنولوژی استارتاپی VX 4</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=vx4.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=vx4.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">vx5.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>پلتفرم نرم‌افزاری و زیرساخت ابری VX 5</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=vx5.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=vx5.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">vx6.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>برندینگ هوش مصنوعی و اتوماسیون VX 6</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=vx6.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=vx6.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">vx7.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>پلتفرم سرعت و مهندسی داده VX 7</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=vx7.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=vx7.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">vx8.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>پلتفرم پرفورمنس بالا VX 8</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=vx8.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=vx8.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">ux6.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>برند لوکس طراحی تجربه کاربری (UX 6 Studio)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=ux6.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=ux6.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">bx4.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>معادل Box 4 / جعبه ابزار نرم‌افزاری و پلتفرم</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=bx4.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=bx4.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">s5x.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>برند پرسرعت نرم‌افزاری و تکنولوژی (S5X)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=s5x.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=s5x.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">hr5.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>منابع انسانی HR Tech و پلتفرم‌های استخدامی</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=hr5.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=hr5.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">r7x.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>برند پرفورمنس، دولوپری و سخت‌افزار</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=r7x.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=r7x.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">w8x.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>وب نسل هشت و آژانس‌های دیجیتال</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=w8x.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=w8x.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">z65.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>کد عددی رند و کوتاه ۳ کاراکتری</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=z65.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=z65.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">c3b.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>الگوی LNL با تلفظ روان و تیز</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=c3b.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=c3b.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">t8b.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>الگوی LNL متقارن و کوتاه</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=t8b.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=t8b.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">s9v.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>الگوی LNL، فونتیک سبک و استارتاپی</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=s9v.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=s9v.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">oz4.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>الگوی LLN، برندینگ جالب و فانتزی</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=oz4.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=oz4.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="3char">
-            <td><span class="domain-name">eg6.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>الگوی LLN، ۳ کاراکتری مناسب استارتاپ</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=eg6.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=eg6.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <!-- PURE LETTER BOOK & CREATOR DOMAINS (FREE) -->
-          <tr data-status="free" data-cat="book">
-            <td><span class="domain-name">bokx.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>۴ حرف خالص لاتین، ترکیب Book + X برای پلتفرم کتاب</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=bokx.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=bokx.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="book">
-            <td><span class="domain-name">bukk.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>۴ حرف خالص، فونتیک Buk / کتاب، فوق‌العاده کوتاه</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=bukk.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=bukk.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="book">
-            <td><span class="domain-name">rooq.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>۴ حرف خالص، ریشه «ورق» و «روق»، ادبی و نشریاتی</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=rooq.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=rooq.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="book">
-            <td><span class="domain-name">khvan.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>۵ حرف خالص، ریشه اصیل «خوان» (خواندن / کتابخوان)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=khvan.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=khvan.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <tr data-status="free" data-cat="book">
-            <td><span class="domain-name">b0ok.ir</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت</span></td>
-            <td>لیت‌اسپیک مستقیم واژه Book با عدد صفر، ۴ کاراکتری</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
-                <span class="check-pill ok">ایران‌سرور: آزاد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-links">
-                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
-                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=b0ok.ir" target="_blank">ثبت نت‌افراز</a>
-                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=b0ok.ir" target="_blank">Whois</a>
-              </div>
-            </td>
-          </tr>
-
-          <!-- PREVIOUSLY AUDITED DOMAINS: RE-CHECKED AS SOLD / TAKEN -->
-          <tr data-status="taken" data-cat="book">
-            <td><span class="domain-name">readr.ir</span></td>
-            <td><span class="badge badge-taken">ثبت قطعی / فروخته شده</span></td>
-            <td>معادل Reader / کتابخوان (در استعلام جدید ثبت قطعی شد)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill fail">وب‌رمز: غیرقابل ثبت</span>
-                <span class="check-pill fail">ایران‌سرور: ناموجود</span>
-              </div>
-            </td>
-            <td><a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=readr.ir" target="_blank">Whois ثبتی</a></td>
-          </tr>
-
-          <tr data-status="taken" data-cat="book">
-            <td><span class="domain-name">readup.ir</span></td>
-            <td><span class="badge badge-taken">ثبت قطعی / فروخته شده</span></td>
-            <td>ترکیب Read + Up (توسط دیگران خریداری شد)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill fail">وب‌رمز: غیرقابل ثبت</span>
-                <span class="check-pill fail">ایران‌سرور: ناموجود</span>
-              </div>
-            </td>
-            <td><a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=readup.ir" target="_blank">Whois ثبتی</a></td>
-          </tr>
-
-          <tr data-status="taken" data-cat="book">
-            <td><span class="domain-name">novlr.ir</span></td>
-            <td><span class="badge badge-taken">ثبت قطعی / فروخته شده</span></td>
-            <td>برند ۵ حرفی رمان و نقد داستان (توسط خریداران تصاحب شد)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill fail">وب‌رمز: غیرقابل ثبت</span>
-                <span class="check-pill fail">ایران‌سرور: ناموجود</span>
-              </div>
-            </td>
-            <td><a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=novlr.ir" target="_blank">Whois ثبتی</a></td>
-          </tr>
-
-          <tr data-status="taken" data-cat="book">
-            <td><span class="domain-name">shelfx.ir</span></td>
-            <td><span class="badge badge-taken">ثبت قطعی / فروخته شده</span></td>
-            <td>شلف‌اکس قفسه کتاب دیجیتال (ثبت قطعی شد)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill fail">وب‌رمز: غیرقابل ثبت</span>
-                <span class="check-pill fail">ایران‌سرور: ناموجود</span>
-              </div>
-            </td>
-            <td><a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=shelfx.ir" target="_blank">Whois ثبتی</a></td>
-          </tr>
-
-          <tr data-status="taken" data-cat="book">
-            <td><span class="domain-name">boklog.ir</span></td>
-            <td><span class="badge badge-taken">ثبت قطعی / فروخته شده</span></td>
-            <td>وبلاگ کتاب BookLog (ثبت قطعی شد)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill fail">وب‌رمز: غیرقابل ثبت</span>
-                <span class="check-pill fail">ایران‌سرور: ناموجود</span>
-              </div>
-            </td>
-            <td><a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=boklog.ir" target="_blank">Whois ثبتی</a></td>
-          </tr>
-
-          <tr data-status="taken" data-cat="3char">
-            <td><span class="domain-name">w4r.ir</span></td>
-            <td><span class="badge badge-taken">ثبت قطعی / فروخته شده</span></td>
-            <td>کلمه معنادار War (جنگ، گیمینگ، امنیت)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill fail">IRNIC: ثبت شده</span>
-                <span class="check-pill fail">ایران‌سرور: غیرقابل ثبت</span>
-              </div>
-            </td>
-            <td><a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=w4r.ir" target="_blank">Whois ثبتی</a></td>
-          </tr>
-
-          <tr data-status="taken" data-cat="3char">
-            <td><span class="domain-name">g1k.ir</span></td>
-            <td><span class="badge badge-taken">ثبت قطعی / فروخته شده</span></td>
-            <td>کلمه لیت‌اسپیک Geek (دولوپری و تکنولوژی)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill fail">IRNIC: ثبت شده</span>
-                <span class="check-pill fail">وب‌رمز: غیرقابل ثبت</span>
-              </div>
-            </td>
-            <td><a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=g1k.ir" target="_blank">Whois ثبتی</a></td>
-          </tr>
-
-          <tr data-status="taken" data-cat="3char">
-            <td><span class="domain-name">v1x.ir</span></td>
-            <td><span class="badge badge-taken">ثبت قطعی / فروخته شده</span></td>
-            <td>نسخه یک V1X (محصولات نرم‌افزاری و AI)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill fail">IRNIC: ثبت شده</span>
-                <span class="check-pill fail">ایران‌سرور: غیرقابل ثبت</span>
-              </div>
-            </td>
-            <td><a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=v1x.ir" target="_blank">Whois ثبتی</a></td>
-          </tr>
-
-          <tr data-status="taken" data-cat="3char">
-            <td><span class="domain-name">ux4.ir</span></td>
-            <td><span class="badge badge-taken">ثبت قطعی / فروخته شده</span></td>
-            <td>برند تجربه کاربری UX (ثبت قطعی شد)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill fail">IRNIC: ثبت شده</span>
-                <span class="check-pill fail">وب‌رمز: ناموجود</span>
-              </div>
-            </td>
-            <td><a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=ux4.ir" target="_blank">Whois ثبتی</a></td>
-          </tr>
-
-          <tr data-status="taken" data-cat="3char">
-            <td><span class="domain-name">kl6.ir</span></td>
-            <td><span class="badge badge-taken">ثبت قطعی / فروخته شده</span></td>
-            <td>الگوی LLN (توسط خریداران ثبت شد)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill fail">وب‌رمز: ثبت شده</span>
-              </div>
-            </td>
-            <td><a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=kl6.ir" target="_blank">Whois ثبتی</a></td>
-          </tr>
-
-          <tr data-status="taken" data-cat="3char">
-            <td><span class="domain-name">f5z.ir</span></td>
-            <td><span class="badge badge-taken">ثبت قطعی / فروخته شده</span></td>
-            <td>الگوی LNL (توسط خریداران ثبت شد)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill fail">وب‌رمز: ثبت شده</span>
-              </div>
-            </td>
-            <td><a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=f5z.ir" target="_blank">Whois ثبتی</a></td>
-          </tr>
-
-          <tr data-status="taken" data-cat="3char">
-            <td><span class="domain-name">q6v.ir</span></td>
-            <td><span class="badge badge-taken">ثبت قطعی / فروخته شده</span></td>
-            <td>الگوی LNL (توسط خریداران ثبت شد)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill fail">وب‌رمز: ثبت شده</span>
-              </div>
-            </td>
-            <td><a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=q6v.ir" target="_blank">Whois ثبتی</a></td>
-          </tr>
-
-          <tr data-status="taken" data-cat="3char">
-            <td><span class="domain-name">y8w.ir</span></td>
-            <td><span class="badge badge-taken">ثبت قطعی / فروخته شده</span></td>
-            <td>الگوی LNL (ثبت قطعی شد)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill fail">وب‌رمز: ثبت شده</span>
-              </div>
-            </td>
-            <td><a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=y8w.ir" target="_blank">Whois ثبتی</a></td>
-          </tr>
-
-          <tr data-status="taken" data-cat="3char">
-            <td><span class="domain-name">5ij.ir</span></td>
-            <td><span class="badge badge-taken">ثبت قطعی / فروخته شده</span></td>
-            <td>الگوی NLL (ثبت قطعی شد)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill fail">وب‌رمز: ثبت شده</span>
-              </div>
-            </td>
-            <td><a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=5ij.ir" target="_blank">Whois ثبتی</a></td>
-          </tr>
-
-          <tr data-status="taken" data-cat="3char">
-            <td><span class="domain-name">6kl.ir</span></td>
-            <td><span class="badge badge-taken">ثبت قطعی / فروخته شده</span></td>
-            <td>الگوی NLL (ثبت قطعی شد)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill fail">وب‌رمز: ثبت شده</span>
-              </div>
-            </td>
-            <td><a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=6kl.ir" target="_blank">Whois ثبتی</a></td>
-          </tr>
-
-          <tr data-status="taken" data-cat="3char">
-            <td><span class="domain-name">8op.ir</span></td>
-            <td><span class="badge badge-taken">ثبت قطعی / فروخته شده</span></td>
-            <td>الگوی NLL (ثبت قطعی شد)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill fail">وب‌رمز: ثبت شده</span>
-              </div>
-            </td>
-            <td><a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=8op.ir" target="_blank">Whois ثبتی</a></td>
-          </tr>
-
-          <tr data-status="taken" data-cat="3char">
-            <td><span class="domain-name">3jk.ir</span></td>
-            <td><span class="badge badge-taken">ثبت قطعی / فروخته شده</span></td>
-            <td>الگوی NLL (ثبت قطعی شد)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill fail">وب‌رمز: ثبت شده</span>
-              </div>
-            </td>
-            <td><a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=3jk.ir" target="_blank">Whois ثبتی</a></td>
-          </tr>
-
-          <tr data-status="taken" data-cat="3char">
-            <td><span class="domain-name">y34.ir</span></td>
-            <td><span class="badge badge-taken">ثبت قطعی / فروخته شده</span></td>
-            <td>الگوی LNN (ثبت قطعی شد)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill fail">وب‌رمز: ثبت شده</span>
-              </div>
-            </td>
-            <td><a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=y34.ir" target="_blank">Whois ثبتی</a></td>
-          </tr>
-
-          <tr data-status="taken" data-cat="3char">
-            <td><span class="domain-name">56z.ir</span></td>
-            <td><span class="badge badge-taken">ثبت قطعی / فروخته شده</span></td>
-            <td>الگوی NNL (ثبت قطعی شد)</td>
-            <td>
-              <div class="registrar-checks">
-                <span class="check-pill fail">وب‌رمز: ثبت شده</span>
-              </div>
-            </td>
-            <td><a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=56z.ir" target="_blank">Whois ثبتی</a></td>
-          </tr>
-
+          <!-- Rendered dynamically by JavaScript quota engine -->
         </tbody>
       </table>
     </div>
@@ -2337,28 +526,181 @@
   </div>
 
   <script>
+    const DOMAIN_DATA = {"free": [{"name": "lb3.ir", "cat": "3char", "desc": "مخفف Lab 3 / آزمایشگاه تحقیق و توسعه نسل ۳", "status": "free"}, {"name": "lb4.ir", "cat": "3char", "desc": "مخفف Lab 4 / آزمایشگاه نرم‌افزار و هوش مصنوعی", "status": "free"}, {"name": "lb5.ir", "cat": "3char", "desc": "مخفف Lab 5 / استودیو تحقیق و توسعه فناوری", "status": "free"}, {"name": "lb6.ir", "cat": "3char", "desc": "مخفف Lab 6 / آزمایشگاه نوآوری و دولوپری", "status": "free"}, {"name": "lb7.ir", "cat": "3char", "desc": "مخفف Lab 7 / آزمایشگاه کدنویسی و تحلیل داده", "status": "free"}, {"name": "lb8.ir", "cat": "3char", "desc": "مخفف Lab 8 / مرکز فناوری و توسعه محصول", "status": "free"}, {"name": "lb9.ir", "cat": "3char", "desc": "مخفف Lab 9 / آزمایشگاه ابری و سیستم‌های هوشمند", "status": "free"}, {"name": "nx4.ir", "cat": "3char", "desc": "مخفف Next 4 / پلتفرم آینده و نسل بعدی وب", "status": "free"}, {"name": "nx5.ir", "cat": "3char", "desc": "مخفف Next 5 / نسل پنج وب و فناوری", "status": "free"}, {"name": "nx6.ir", "cat": "3char", "desc": "مخفف Next 6 / استارتاپ پیشرو فناوری", "status": "free"}, {"name": "nx7.ir", "cat": "3char", "desc": "مخفف Next 7 / برند تکنولوژی آینده‌نگر", "status": "free"}, {"name": "nx8.ir", "cat": "3char", "desc": "مخفف Next 8 / زیرساخت مدرن نرم‌افزاری", "status": "free"}, {"name": "nx9.ir", "cat": "3char", "desc": "مخفف Next 9 / فناوری نوآورانه و تحول دیجیتال", "status": "free"}, {"name": "ox6.ir", "cat": "3char", "desc": "مخفف Oxygen / Oxford 6 / برند شیک آکادمیک و سلامت", "status": "free"}, {"name": "ox7.ir", "cat": "3char", "desc": "مخفف Oxygen / Oxford 7 / برند تکنولوژی پاک", "status": "free"}, {"name": "ox8.ir", "cat": "3char", "desc": "مخفف Oxygen / Oxford 8 / پلتفرم نوین انرژی و هوش", "status": "free"}, {"name": "ox9.ir", "cat": "3char", "desc": "مخفف Oxygen / Oxford 9 / برند مدرن و بین‌المللی", "status": "free"}, {"name": "po4.ir", "cat": "3char book", "desc": "مخفف Podcast 4 / پلتفرم پادکست، صدا و بوک‌کست", "status": "free"}, {"name": "fm7.ir", "cat": "3char book", "desc": "موج رادیویی FM 7 / رسانه صوتی و پادکست کتاب", "status": "free"}, {"name": "by6.ir", "cat": "3char", "desc": "مخفف Buy 6 / پلتفرم خرید آنلاین و ایکامرس", "status": "free"}, {"name": "by7.ir", "cat": "3char", "desc": "مخفف Buy 7 / مارکت‌پلیس سریع و مدرن", "status": "free"}, {"name": "by9.ir", "cat": "3char", "desc": "مخفف Buy 9 / فروشگاه هوشمند ابری", "status": "free"}, {"name": "2wr.ir", "cat": "3char book", "desc": "الگوی NLL / دو نویسنده (2 Writers) و نشر دوطرفه", "status": "free"}, {"name": "3wr.ir", "cat": "3char book", "desc": "الگوی NLL / وب سه و نویسندگی (3 Writers / Web3)", "status": "free"}, {"name": "4wr.ir", "cat": "3char book", "desc": "الگوی NLL / چهار نویسنده و حلقه نویسندگان", "status": "free"}, {"name": "5wr.ir", "cat": "3char book", "desc": "الگوی NLL / تحریریه ۵ نفره و مجله نویسی", "status": "free"}, {"name": "7wr.ir", "cat": "3char book", "desc": "الگوی NLL / هفت نویسنده (7 Writers) و باشگاه ادبی", "status": "free"}, {"name": "8wr.ir", "cat": "3char book", "desc": "الگوی NLL / هاب تولید محتوا و داستان‌نویسی", "status": "free"}, {"name": "9wr.ir", "cat": "3char book", "desc": "الگوی NLL / کلاود محتوای ۹ نویسنده", "status": "free"}, {"name": "5rd.ir", "cat": "3char book", "desc": "الگوی NLL / پنج کتابخوان (5 Readers) و باشگاه مطالعه", "status": "free"}, {"name": "7rd.ir", "cat": "3char book", "desc": "الگوی NLL / هفت کتابخوان و نقد ادبیات هفتگی", "status": "free"}, {"name": "9rd.ir", "cat": "3char book", "desc": "الگوی NLL / کلاود نقد کتاب و بوک‌بلاگری", "status": "free"}, {"name": "7tx.ir", "cat": "3char book", "desc": "الگوی NLL / هفت متن (7 Text) و بلاگ‌پست کوتاه", "status": "free"}, {"name": "8tx.ir", "cat": "3char book", "desc": "الگوی NLL / سیستم نشر متن و یادداشت آنلاین", "status": "free"}, {"name": "9tx.ir", "cat": "3char book", "desc": "الگوی NLL / موتور تایپ و نقد کتاب آنلاین", "status": "free"}, {"name": "wr2.ir", "cat": "3char book", "desc": "کلمه مخفف Write 2 / مناسب پلتفرم نویسندگان و نشر دیجیتال", "status": "free"}, {"name": "wr3.ir", "cat": "3char book", "desc": "کلمه مخفف Write 3 / وب نسل سه برای محتوا و وبلاگ‌نویسی", "status": "free"}, {"name": "wr4.ir", "cat": "3char book", "desc": "کلمه Write 4 / پلتفرم چهارم نویسندگان و کتاب‌نویسی", "status": "free"}, {"name": "wr5.ir", "cat": "3char book", "desc": "کلمه مخفف Write 5 / پلتفرم مقاله‌نویسی و نشر", "status": "free"}, {"name": "wr6.ir", "cat": "3char book", "desc": "کلمه مخفف Write 6 / استارتاپ محتوا و ادیتوریال", "status": "free"}, {"name": "wr7.ir", "cat": "3char book", "desc": "کلمه مخفف Write 7 / هفته‌نامه و مجله نویسندگان", "status": "free"}, {"name": "wr8.ir", "cat": "3char book", "desc": "کلمه مخفف Write 8 / نشریه مدرن و محتوای بلاگری", "status": "free"}, {"name": "wr9.ir", "cat": "3char book", "desc": "کلمه مخفف Write 9 / کلاود محتوا و داستان‌نویسی", "status": "free"}, {"name": "rd3.ir", "cat": "3char book", "desc": "کلمه مخفف Read 3 / پلتفرم نسل سه کتابخوان‌ها", "status": "free"}, {"name": "rd5.ir", "cat": "3char book", "desc": "کلمه مخفف Read 5 / باشگاه خوانش ۵ کتاب یا مجله", "status": "free"}, {"name": "rd8.ir", "cat": "3char book", "desc": "کلمه مخفف Read 8 / اکوسیستم مطالعه و نقد کتاب", "status": "free"}, {"name": "tx3.ir", "cat": "3char book", "desc": "کلمه مخفف Text 3 / پلتفرم متن و بلاگ‌پست آنلاین", "status": "free"}, {"name": "tx8.ir", "cat": "3char book", "desc": "کلمه مخفف Text 8 / سیستم مدیریت متن و محتوا", "status": "free"}, {"name": "tx9.ir", "cat": "3char book", "desc": "کلمه مخفف Text 9 / موتور تایپ و نقد کتاب", "status": "free"}, {"name": "cv4.ir", "cat": "3char book", "desc": "معادل Cover 4 یا پلتفرم طراحی جلد کتاب و رزومه", "status": "free"}, {"name": "ln6.ir", "cat": "3char book", "desc": "معادل Line 6 / سطر ششم و ادبیات خطی", "status": "free"}, {"name": "hq4.ir", "cat": "3char", "desc": "مخفف HeadQuarters 4 / ستاد مرکزی و هاب استارتاپی", "status": "free"}, {"name": "hq5.ir", "cat": "3char", "desc": "مخفف HeadQuarters 5 / مرکز فرماندهی کسب‌وکار", "status": "free"}, {"name": "hq6.ir", "cat": "3char", "desc": "مخفف HeadQuarters 6 / هاب سازمانی و اداری", "status": "free"}, {"name": "hq8.ir", "cat": "3char", "desc": "مخفف HeadQuarters 8 / هلدینگ و دفتر مرکزی برند", "status": "free"}, {"name": "lx3.ir", "cat": "3char", "desc": "برند لاکچری و کتابخانه دیجیتال (Lux / Library 3)", "status": "free"}, {"name": "lx4.ir", "cat": "3char", "desc": "برند تک و کتابخانه‌ای (LX 4 Studio)", "status": "free"}, {"name": "lx5.ir", "cat": "3char", "desc": "برند پرسرعت نرم‌افزاری و مدرن (LX 5)", "status": "free"}, {"name": "lx6.ir", "cat": "3char", "desc": "برند سیستمی و تکنولوژی (LX 6 Core)", "status": "free"}, {"name": "lx7.ir", "cat": "3char", "desc": "برند دیزاین و فریم‌ورک لوکس (LX 7)", "status": "free"}, {"name": "lx8.ir", "cat": "3char", "desc": "سیستم نرم‌افزاری و تکنولوژی مدرن (LX 8)", "status": "free"}, {"name": "px7.ir", "cat": "3char", "desc": "برند طراحی، عکاسی و وب Pixel 7", "status": "free"}, {"name": "fx8.ir", "cat": "3char", "desc": "استودیو افکت‌های بصری و بازارهای مالی FX 8", "status": "free"}, {"name": "rx3.ir", "cat": "3char", "desc": "برند ری‌اکتیو، فریم‌ورک دولوپری یا سلامت RX 3", "status": "free"}, {"name": "zx8.ir", "cat": "3char", "desc": "برند تک و پردازشی ZX 8", "status": "free"}, {"name": "vx4.ir", "cat": "3char", "desc": "برند شتاب‌یافته و تکنولوژی استارتاپی VX 4", "status": "free"}, {"name": "vx5.ir", "cat": "3char", "desc": "پلتفرم نرم‌افزاری و زیرساخت ابری VX 5", "status": "free"}, {"name": "vx6.ir", "cat": "3char", "desc": "برندینگ هوش مصنوعی و اتوماسیون VX 6", "status": "free"}, {"name": "vx7.ir", "cat": "3char", "desc": "پلتفرم سرعت و مهندسی داده VX 7", "status": "free"}, {"name": "vx8.ir", "cat": "3char", "desc": "پلتفرم پرفورمنس بالا VX 8", "status": "free"}, {"name": "ux6.ir", "cat": "3char", "desc": "برند لوکس طراحی تجربه کاربری (UX 6 Studio)", "status": "free"}, {"name": "bx4.ir", "cat": "3char", "desc": "معادل Box 4 / جعبه ابزار نرم‌افزاری و پلتفرم", "status": "free"}, {"name": "s5x.ir", "cat": "3char", "desc": "برند پرسرعت نرم‌افزاری و تکنولوژی (S5X)", "status": "free"}, {"name": "hr5.ir", "cat": "3char", "desc": "منابع انسانی HR Tech و پلتفرم‌های استخدامی", "status": "free"}, {"name": "r7x.ir", "cat": "3char", "desc": "برند پرفورمنس، دولوپری و سخت‌افزار", "status": "free"}, {"name": "w8x.ir", "cat": "3char", "desc": "وب نسل هشت و آژانس‌های دیجیتال", "status": "free"}, {"name": "z65.ir", "cat": "3char", "desc": "کد عددی رند و کوتاه ۳ کاراکتری", "status": "free"}, {"name": "c3b.ir", "cat": "3char", "desc": "الگوی LNL با تلفظ روان و تیز", "status": "free"}, {"name": "t8b.ir", "cat": "3char", "desc": "الگوی LNL متقارن و کوتاه", "status": "free"}, {"name": "s9v.ir", "cat": "3char", "desc": "الگوی LNL، فونتیک سبک و استارتاپی", "status": "free"}, {"name": "oz4.ir", "cat": "3char", "desc": "الگوی LLN، برندینگ جالب و فانتزی", "status": "free"}, {"name": "eg6.ir", "cat": "3char", "desc": "الگوی LLN، ۳ کاراکتری مناسب استارتاپ", "status": "free"}, {"name": "bokx.ir", "cat": "book", "desc": "۴ حرف خالص لاتین، ترکیب Book + X برای پلتفرم کتاب", "status": "free"}, {"name": "bukk.ir", "cat": "book", "desc": "۴ حرف خالص، فونتیک Buk / کتاب، فوق‌العاده کوتاه", "status": "free"}, {"name": "rooq.ir", "cat": "book", "desc": "۴ حرف خالص، ریشه «ورق» و «روق»، ادبی و نشریاتی", "status": "free"}, {"name": "khvan.ir", "cat": "book", "desc": "۵ حرف خالص، ریشه اصیل «خوان» (خواندن / کتابخوان)", "status": "free"}, {"name": "b0ok.ir", "cat": "book", "desc": "لیت‌اسپیک مستقیم واژه Book با عدد صفر، ۴ کاراکتری", "status": "free"}], "taken": [{"name": "readr.ir", "cat": "book", "desc": "معادل Reader / کتابخوان (در استعلام جدید ثبت قطعی شد)", "status": "taken"}, {"name": "readup.ir", "cat": "book", "desc": "ترکیب Read + Up (توسط دیگران خریداری شد)", "status": "taken"}, {"name": "novlr.ir", "cat": "book", "desc": "برند ۵ حرفی رمان و نقد داستان (توسط خریداران تصاحب شد)", "status": "taken"}, {"name": "shelfx.ir", "cat": "book", "desc": "شلف‌اکس قفسه کتاب دیجیتال (ثبت قطعی شد)", "status": "taken"}, {"name": "boklog.ir", "cat": "book", "desc": "وبلاگ کتاب BookLog (ثبت قطعی شد)", "status": "taken"}, {"name": "w4r.ir", "cat": "3char", "desc": "کلمه معنادار War (جنگ، گیمینگ، امنیت)", "status": "taken"}, {"name": "g1k.ir", "cat": "3char", "desc": "کلمه لیت‌اسپیک Geek (دولوپری و تکنولوژی)", "status": "taken"}, {"name": "v1x.ir", "cat": "3char", "desc": "نسخه یک V1X (محصولات نرم‌افزاری و AI)", "status": "taken"}, {"name": "ux4.ir", "cat": "3char", "desc": "برند تجربه کاربری UX (ثبت قطعی شد)", "status": "taken"}, {"name": "kl6.ir", "cat": "3char", "desc": "الگوی LLN (توسط خریداران ثبت شد)", "status": "taken"}, {"name": "f5z.ir", "cat": "3char", "desc": "الگوی LNL (توسط خریداران ثبت شد)", "status": "taken"}, {"name": "q6v.ir", "cat": "3char", "desc": "الگوی LNL (توسط خریداران ثبت شد)", "status": "taken"}, {"name": "y8w.ir", "cat": "3char", "desc": "الگوی LNL (ثبت قطعی شد)", "status": "taken"}, {"name": "5ij.ir", "cat": "3char", "desc": "الگوی NLL (ثبت قطعی شد)", "status": "taken"}, {"name": "6kl.ir", "cat": "3char", "desc": "الگوی NLL (ثبت قطعی شد)", "status": "taken"}, {"name": "8op.ir", "cat": "3char", "desc": "الگوی NLL (ثبت قطعی شد)", "status": "taken"}, {"name": "3jk.ir", "cat": "3char", "desc": "الگوی NLL (ثبت قطعی شد)", "status": "taken"}, {"name": "y34.ir", "cat": "3char", "desc": "الگوی LNN (ثبت قطعی شد)", "status": "taken"}, {"name": "56z.ir", "cat": "3char", "desc": "الگوی NNL (ثبت قطعی شد)", "status": "taken"}]};
+
+    // Seeded PRNG for deterministic daily 5 domains per visitor
+    function getVisitorSeed() {
+      let seed = localStorage.getItem('visitor_vault_seed');
+      if (!seed) {
+        seed = Math.random().toString(36).substring(2) + Date.now().toString(36);
+        localStorage.setItem('visitor_vault_seed', seed);
+      }
+      return seed;
+    }
+
+    function getTodayString() {
+      const now = new Date();
+      return now.toLocaleDateString('en-CA', { timeZone: 'Asia/Tehran' });
+    }
+
+    function seededRandom(str) {
+      let h = 1779033703 ^ str.length;
+      for (let i = 0; i < str.length; i++) {
+        h = Math.imul(h ^ str.charCodeAt(i), 3432918353);
+        h = h << 13 | h >>> 19;
+      }
+      return function() {
+        h = Math.imul(h ^ (h >>> 16), 2246822507);
+        h = Math.imul(h ^ (h >>> 13), 3266489909);
+        return (h >>> 0) / 4294967296;
+      };
+    }
+
+    function pickDaily5() {
+      const seed = getVisitorSeed();
+      const today = getTodayString();
+      const prng = seededRandom(seed + '_' + today);
+
+      const indices = DOMAIN_DATA.free.map((_, i) => i);
+      for (let i = indices.length - 1; i > 0; i--) {
+        const j = Math.floor(prng() * (i + 1));
+        [indices[i], indices[j]] = [indices[j], indices[i]];
+      }
+      return indices.slice(0, 5);
+    }
+
+    const daily5Indices = pickDaily5();
+    const daily5Set = new Set(daily5Indices);
+
+    function renderTable() {
+      const tbody = document.getElementById('domainTableBody');
+      tbody.innerHTML = '';
+
+      // 1. Free domains (5 unlocked + 82 locked)
+      DOMAIN_DATA.free.forEach((d, idx) => {
+        const isUnlocked = daily5Set.has(idx);
+        const tr = document.createElement('tr');
+        tr.setAttribute('data-cat', d.cat);
+
+        if (isUnlocked) {
+          tr.setAttribute('data-status', 'daily');
+          tr.innerHTML = `
+            <td><span class="domain-name">` + d.name + `</span></td>
+            <td><span class="badge badge-free">آزاد جهت ثبت (سهمیه امروز)</span></td>
+            <td>` + d.desc + `</td>
+            <td>
+              <div class="registrar-checks">
+                <span class="check-pill ok">وب‌رمز: تایید سبد خرید</span>
+                <span class="check-pill ok">ایران‌سرور: آزاد</span>
+              </div>
+            </td>
+            <td>
+              <div class="action-links">
+                <a class="btn-selva" href="https://selva.ir" target="_blank">ثبت سلوا</a>
+                <a class="btn-netafraz" href="https://client.netafraz.com/cart.php?a=add&domain=register&query=` + d.name + `" target="_blank">ثبت نت‌افراز</a>
+                <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=` + d.name + `" target="_blank">Whois</a>
+              </div>
+            </td>
+          `;
+        } else {
+          tr.setAttribute('data-status', 'locked');
+          const parts = d.name.split('.');
+          const masked = '🔒 ' + '•'.repeat(parts[0].length) + '.ir';
+          tr.innerHTML = `
+            <td><span class="domain-name locked">` + masked + `</span></td>
+            <td><span class="badge badge-locked">قفل سهمیه ۲۴ ساعته</span></td>
+            <td>` + d.desc + `</td>
+            <td>
+              <div class="registrar-checks">
+                <span class="check-pill locked">در نوبت سهمیه بعدی</span>
+              </div>
+            </td>
+            <td>
+              <span style="color: var(--text-muted); font-size: 0.8rem;">🔒 بازگشایی فردا ساعت ۰۰:۰۰</span>
+            </td>
+          `;
+        }
+        tbody.appendChild(tr);
+      });
+
+      // 2. Taken domains
+      DOMAIN_DATA.taken.forEach(d => {
+        const tr = document.createElement('tr');
+        tr.setAttribute('data-status', 'taken');
+        tr.setAttribute('data-cat', d.cat);
+        tr.innerHTML = `
+          <td><span class="domain-name">` + d.name + `</span></td>
+          <td><span class="badge badge-taken">ثبت قطعی / فروخته شده</span></td>
+          <td>` + d.desc + `</td>
+          <td>
+            <div class="registrar-checks">
+              <span class="check-pill fail">غیرقابل ثبت / پر شده</span>
+            </div>
+          </td>
+          <td>
+            <a class="btn-whois" href="https://whois.nic.ir/WHOIS?name=` + d.name + `" target="_blank">Whois ثبتی</a>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      filterTable('daily');
+    }
+
     function filterTable(filter) {
       const rows = document.querySelectorAll('#domainTableBody tr');
       const buttons = document.querySelectorAll('.tab-btn');
 
       buttons.forEach(b => b.classList.remove('active'));
-      event.target.classList.add('active');
+      const activeBtn = Array.from(buttons).find(b => b.getAttribute('onclick').includes(filter));
+      if (activeBtn) activeBtn.classList.add('active');
 
       rows.forEach(row => {
         const status = row.getAttribute('data-status');
-        const cat = row.getAttribute('data-cat');
+        const cat = row.getAttribute('data-cat') || '';
 
         if (filter === 'all') {
           row.style.display = '';
-        } else if (filter === 'free') {
-          row.style.display = (status === 'free') ? '' : 'none';
+        } else if (filter === 'daily') {
+          row.style.display = (status === 'daily') ? '' : 'none';
+        } else if (filter === 'locked') {
+          row.style.display = (status === 'locked') ? '' : 'none';
         } else if (filter === 'taken') {
           row.style.display = (status === 'taken') ? '' : 'none';
         } else if (filter === 'book') {
-          row.style.display = (cat === 'book') ? '' : 'none';
+          row.style.display = (cat.includes('book')) ? '' : 'none';
         }
       });
     }
+
+    function updateCountdown() {
+      const now = new Date();
+      const tehranDateStr = now.toLocaleDateString('en-US', { timeZone: 'Asia/Tehran' });
+      const tehranNow = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Tehran' }));
+      const midnight = new Date(tehranDateStr);
+      midnight.setDate(midnight.getDate() + 1);
+      midnight.setHours(0, 0, 0, 0);
+
+      const diff = midnight - tehranNow;
+      if (diff <= 0) {
+        window.location.reload();
+        return;
+      }
+
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      const fmt = (n) => String(n).padStart(2, '0');
+      const clockEl = document.getElementById('countdownClock');
+      if (clockEl) {
+        clockEl.textContent = `${fmt(hours)}:${fmt(minutes)}:${fmt(seconds)}`;
+      }
+    }
+
+    renderTable();
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
   </script>
 </body>
 </html>
