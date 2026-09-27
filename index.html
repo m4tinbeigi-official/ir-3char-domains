@@ -402,21 +402,21 @@
     </header>
 
     <!-- Quota Anti-Hoarding Card -->
-    <div class="quota-box">
+    <div class="quota-box" id="quotaBox">
       <div class="quota-info">
-        <span class="quota-tag">🛡️ مکانیزم محافظت ضد رندخواری فعال است</span>
-        <div class="quota-title">سهمیه اختصاصی امروز شما: ۵ دامنه آزاد</div>
-        <div class="quota-desc">
+        <span class="quota-tag" id="quotaTag">🛡️ مکانیزم محافظت ضد رندخواری فعال است</span>
+        <div class="quota-title" id="quotaTitle">سهمیه اختصاصی امروز شما: ۵ دامنه آزاد</div>
+        <div class="quota-desc" id="quotaDesc">
           برای جلوگیری از اسکرپ فله‌ای و ثبت انبوه توسط دلالان، هر کاربر در هر ۲۴ ساعت تنها مجاز به مشاهده و ثبت <strong>۵ دامنه رند آزاد</strong> است. سایر دامنه‌ها تا نوبت فردا در حالت قفل محافظت‌شده باقی می‌مانند.
         </div>
         <div class="quota-stats-row">
-          <div class="q-stat">دامنه‌های باز امروز شما: <span style="color: #34d399;">۵ دامنه</span></div>
-          <div class="q-stat">دامنه‌های قفل محافظت‌شده: <span style="color: #fbbf24;">۸۲ دامنه</span></div>
+          <div class="q-stat">دامنه‌های باز امروز شما: <span style="color: #34d399;" id="statUnlockedVal">۵ دامنه</span></div>
+          <div class="q-stat">دامنه‌های قفل محافظت‌شده: <span style="color: #fbbf24;" id="statLockedVal">۸۲ دامنه</span></div>
           <div class="q-stat">ثبت قطعی / فروخته‌شده: <span style="color: #f87171;">۱۹ دامنه</span></div>
         </div>
       </div>
       <div class="timer-wrap">
-        <div class="timer-label">زمان تا چرخش سهمیه بعدی (۰۰:۰۰ بامداد)</div>
+        <div class="timer-label" id="timerLabel">زمان تا چرخش سهمیه بعدی (۰۰:۰۰ بامداد)</div>
         <div class="timer-clock" id="countdownClock">--:--:--</div>
       </div>
     </div>
@@ -444,9 +444,9 @@
 
     <div class="stats-grid">
       <div class="stat-card">
-        <div class="stat-title">سهمیه باز امروز شما</div>
-        <div class="stat-value" style="color: #34d399;">۵ دامنه</div>
-        <div class="stat-sub">قابل ثبت فوری در سلوا و نت‌افراز</div>
+        <div class="stat-title" id="statCard1Title">سهمیه باز امروز شما</div>
+        <div class="stat-value" style="color: #34d399;" id="statCard1Val">۵ دامنه</div>
+        <div class="stat-sub" id="statCard1Sub">قابل ثبت فوری در سلوا و نت‌افراز</div>
       </div>
       <div class="stat-card">
         <div class="stat-title">۳ حرفی خالص انگلیسی (LLL)</div>
@@ -496,9 +496,9 @@
     </div>
 
     <div class="tabs">
-      <button class="tab-btn active" onclick="filterTable('daily')">سهمیه باز امروز شما (۵ دامنه)</button>
+      <button class="tab-btn active" id="tabDaily" onclick="filterTable('daily')">سهمیه باز امروز شما (۵ دامنه)</button>
       <button class="tab-btn" onclick="filterTable('all')">همه دامنه‌ها (آزاد + قفل + فروخته‌شده)</button>
-      <button class="tab-btn" onclick="filterTable('locked')">دامنه‌های قفل سهمیه (۸۲ دامنه)</button>
+      <button class="tab-btn" id="tabLocked" onclick="filterTable('locked')">دامنه‌های قفل سهمیه (۸۲ دامنه)</button>
       <button class="tab-btn" onclick="filterTable('taken')">فروخته شده / ثبت قطعی (۱۹ دامنه)</button>
       <button class="tab-btn" onclick="filterTable('book')">دامنه‌های بوک‌بلاگری و نشر</button>
     </div>
@@ -528,6 +528,14 @@
   <script>
     const DOMAIN_DATA = {"free": [{"name": "lb3.ir", "cat": "3char", "desc": "مخفف Lab 3 / آزمایشگاه تحقیق و توسعه نسل ۳", "status": "free"}, {"name": "lb4.ir", "cat": "3char", "desc": "مخفف Lab 4 / آزمایشگاه نرم‌افزار و هوش مصنوعی", "status": "free"}, {"name": "lb5.ir", "cat": "3char", "desc": "مخفف Lab 5 / استودیو تحقیق و توسعه فناوری", "status": "free"}, {"name": "lb6.ir", "cat": "3char", "desc": "مخفف Lab 6 / آزمایشگاه نوآوری و دولوپری", "status": "free"}, {"name": "lb7.ir", "cat": "3char", "desc": "مخفف Lab 7 / آزمایشگاه کدنویسی و تحلیل داده", "status": "free"}, {"name": "lb8.ir", "cat": "3char", "desc": "مخفف Lab 8 / مرکز فناوری و توسعه محصول", "status": "free"}, {"name": "lb9.ir", "cat": "3char", "desc": "مخفف Lab 9 / آزمایشگاه ابری و سیستم‌های هوشمند", "status": "free"}, {"name": "nx4.ir", "cat": "3char", "desc": "مخفف Next 4 / پلتفرم آینده و نسل بعدی وب", "status": "free"}, {"name": "nx5.ir", "cat": "3char", "desc": "مخفف Next 5 / نسل پنج وب و فناوری", "status": "free"}, {"name": "nx6.ir", "cat": "3char", "desc": "مخفف Next 6 / استارتاپ پیشرو فناوری", "status": "free"}, {"name": "nx7.ir", "cat": "3char", "desc": "مخفف Next 7 / برند تکنولوژی آینده‌نگر", "status": "free"}, {"name": "nx8.ir", "cat": "3char", "desc": "مخفف Next 8 / زیرساخت مدرن نرم‌افزاری", "status": "free"}, {"name": "nx9.ir", "cat": "3char", "desc": "مخفف Next 9 / فناوری نوآورانه و تحول دیجیتال", "status": "free"}, {"name": "ox6.ir", "cat": "3char", "desc": "مخفف Oxygen / Oxford 6 / برند شیک آکادمیک و سلامت", "status": "free"}, {"name": "ox7.ir", "cat": "3char", "desc": "مخفف Oxygen / Oxford 7 / برند تکنولوژی پاک", "status": "free"}, {"name": "ox8.ir", "cat": "3char", "desc": "مخفف Oxygen / Oxford 8 / پلتفرم نوین انرژی و هوش", "status": "free"}, {"name": "ox9.ir", "cat": "3char", "desc": "مخفف Oxygen / Oxford 9 / برند مدرن و بین‌المللی", "status": "free"}, {"name": "po4.ir", "cat": "3char book", "desc": "مخفف Podcast 4 / پلتفرم پادکست، صدا و بوک‌کست", "status": "free"}, {"name": "fm7.ir", "cat": "3char book", "desc": "موج رادیویی FM 7 / رسانه صوتی و پادکست کتاب", "status": "free"}, {"name": "by6.ir", "cat": "3char", "desc": "مخفف Buy 6 / پلتفرم خرید آنلاین و ایکامرس", "status": "free"}, {"name": "by7.ir", "cat": "3char", "desc": "مخفف Buy 7 / مارکت‌پلیس سریع و مدرن", "status": "free"}, {"name": "by9.ir", "cat": "3char", "desc": "مخفف Buy 9 / فروشگاه هوشمند ابری", "status": "free"}, {"name": "2wr.ir", "cat": "3char book", "desc": "الگوی NLL / دو نویسنده (2 Writers) و نشر دوطرفه", "status": "free"}, {"name": "3wr.ir", "cat": "3char book", "desc": "الگوی NLL / وب سه و نویسندگی (3 Writers / Web3)", "status": "free"}, {"name": "4wr.ir", "cat": "3char book", "desc": "الگوی NLL / چهار نویسنده و حلقه نویسندگان", "status": "free"}, {"name": "5wr.ir", "cat": "3char book", "desc": "الگوی NLL / تحریریه ۵ نفره و مجله نویسی", "status": "free"}, {"name": "7wr.ir", "cat": "3char book", "desc": "الگوی NLL / هفت نویسنده (7 Writers) و باشگاه ادبی", "status": "free"}, {"name": "8wr.ir", "cat": "3char book", "desc": "الگوی NLL / هاب تولید محتوا و داستان‌نویسی", "status": "free"}, {"name": "9wr.ir", "cat": "3char book", "desc": "الگوی NLL / کلاود محتوای ۹ نویسنده", "status": "free"}, {"name": "5rd.ir", "cat": "3char book", "desc": "الگوی NLL / پنج کتابخوان (5 Readers) و باشگاه مطالعه", "status": "free"}, {"name": "7rd.ir", "cat": "3char book", "desc": "الگوی NLL / هفت کتابخوان و نقد ادبیات هفتگی", "status": "free"}, {"name": "9rd.ir", "cat": "3char book", "desc": "الگوی NLL / کلاود نقد کتاب و بوک‌بلاگری", "status": "free"}, {"name": "7tx.ir", "cat": "3char book", "desc": "الگوی NLL / هفت متن (7 Text) و بلاگ‌پست کوتاه", "status": "free"}, {"name": "8tx.ir", "cat": "3char book", "desc": "الگوی NLL / سیستم نشر متن و یادداشت آنلاین", "status": "free"}, {"name": "9tx.ir", "cat": "3char book", "desc": "الگوی NLL / موتور تایپ و نقد کتاب آنلاین", "status": "free"}, {"name": "wr2.ir", "cat": "3char book", "desc": "کلمه مخفف Write 2 / مناسب پلتفرم نویسندگان و نشر دیجیتال", "status": "free"}, {"name": "wr3.ir", "cat": "3char book", "desc": "کلمه مخفف Write 3 / وب نسل سه برای محتوا و وبلاگ‌نویسی", "status": "free"}, {"name": "wr4.ir", "cat": "3char book", "desc": "کلمه Write 4 / پلتفرم چهارم نویسندگان و کتاب‌نویسی", "status": "free"}, {"name": "wr5.ir", "cat": "3char book", "desc": "کلمه مخفف Write 5 / پلتفرم مقاله‌نویسی و نشر", "status": "free"}, {"name": "wr6.ir", "cat": "3char book", "desc": "کلمه مخفف Write 6 / استارتاپ محتوا و ادیتوریال", "status": "free"}, {"name": "wr7.ir", "cat": "3char book", "desc": "کلمه مخفف Write 7 / هفته‌نامه و مجله نویسندگان", "status": "free"}, {"name": "wr8.ir", "cat": "3char book", "desc": "کلمه مخفف Write 8 / نشریه مدرن و محتوای بلاگری", "status": "free"}, {"name": "wr9.ir", "cat": "3char book", "desc": "کلمه مخفف Write 9 / کلاود محتوا و داستان‌نویسی", "status": "free"}, {"name": "rd3.ir", "cat": "3char book", "desc": "کلمه مخفف Read 3 / پلتفرم نسل سه کتابخوان‌ها", "status": "free"}, {"name": "rd5.ir", "cat": "3char book", "desc": "کلمه مخفف Read 5 / باشگاه خوانش ۵ کتاب یا مجله", "status": "free"}, {"name": "rd8.ir", "cat": "3char book", "desc": "کلمه مخفف Read 8 / اکوسیستم مطالعه و نقد کتاب", "status": "free"}, {"name": "tx3.ir", "cat": "3char book", "desc": "کلمه مخفف Text 3 / پلتفرم متن و بلاگ‌پست آنلاین", "status": "free"}, {"name": "tx8.ir", "cat": "3char book", "desc": "کلمه مخفف Text 8 / سیستم مدیریت متن و محتوا", "status": "free"}, {"name": "tx9.ir", "cat": "3char book", "desc": "کلمه مخفف Text 9 / موتور تایپ و نقد کتاب", "status": "free"}, {"name": "cv4.ir", "cat": "3char book", "desc": "معادل Cover 4 یا پلتفرم طراحی جلد کتاب و رزومه", "status": "free"}, {"name": "ln6.ir", "cat": "3char book", "desc": "معادل Line 6 / سطر ششم و ادبیات خطی", "status": "free"}, {"name": "hq4.ir", "cat": "3char", "desc": "مخفف HeadQuarters 4 / ستاد مرکزی و هاب استارتاپی", "status": "free"}, {"name": "hq5.ir", "cat": "3char", "desc": "مخفف HeadQuarters 5 / مرکز فرماندهی کسب‌وکار", "status": "free"}, {"name": "hq6.ir", "cat": "3char", "desc": "مخفف HeadQuarters 6 / هاب سازمانی و اداری", "status": "free"}, {"name": "hq8.ir", "cat": "3char", "desc": "مخفف HeadQuarters 8 / هلدینگ و دفتر مرکزی برند", "status": "free"}, {"name": "lx3.ir", "cat": "3char", "desc": "برند لاکچری و کتابخانه دیجیتال (Lux / Library 3)", "status": "free"}, {"name": "lx4.ir", "cat": "3char", "desc": "برند تک و کتابخانه‌ای (LX 4 Studio)", "status": "free"}, {"name": "lx5.ir", "cat": "3char", "desc": "برند پرسرعت نرم‌افزاری و مدرن (LX 5)", "status": "free"}, {"name": "lx6.ir", "cat": "3char", "desc": "برند سیستمی و تکنولوژی (LX 6 Core)", "status": "free"}, {"name": "lx7.ir", "cat": "3char", "desc": "برند دیزاین و فریم‌ورک لوکس (LX 7)", "status": "free"}, {"name": "lx8.ir", "cat": "3char", "desc": "سیستم نرم‌افزاری و تکنولوژی مدرن (LX 8)", "status": "free"}, {"name": "px7.ir", "cat": "3char", "desc": "برند طراحی، عکاسی و وب Pixel 7", "status": "free"}, {"name": "fx8.ir", "cat": "3char", "desc": "استودیو افکت‌های بصری و بازارهای مالی FX 8", "status": "free"}, {"name": "rx3.ir", "cat": "3char", "desc": "برند ری‌اکتیو، فریم‌ورک دولوپری یا سلامت RX 3", "status": "free"}, {"name": "zx8.ir", "cat": "3char", "desc": "برند تک و پردازشی ZX 8", "status": "free"}, {"name": "vx4.ir", "cat": "3char", "desc": "برند شتاب‌یافته و تکنولوژی استارتاپی VX 4", "status": "free"}, {"name": "vx5.ir", "cat": "3char", "desc": "پلتفرم نرم‌افزاری و زیرساخت ابری VX 5", "status": "free"}, {"name": "vx6.ir", "cat": "3char", "desc": "برندینگ هوش مصنوعی و اتوماسیون VX 6", "status": "free"}, {"name": "vx7.ir", "cat": "3char", "desc": "پلتفرم سرعت و مهندسی داده VX 7", "status": "free"}, {"name": "vx8.ir", "cat": "3char", "desc": "پلتفرم پرفورمنس بالا VX 8", "status": "free"}, {"name": "ux6.ir", "cat": "3char", "desc": "برند لوکس طراحی تجربه کاربری (UX 6 Studio)", "status": "free"}, {"name": "bx4.ir", "cat": "3char", "desc": "معادل Box 4 / جعبه ابزار نرم‌افزاری و پلتفرم", "status": "free"}, {"name": "s5x.ir", "cat": "3char", "desc": "برند پرسرعت نرم‌افزاری و تکنولوژی (S5X)", "status": "free"}, {"name": "hr5.ir", "cat": "3char", "desc": "منابع انسانی HR Tech و پلتفرم‌های استخدامی", "status": "free"}, {"name": "r7x.ir", "cat": "3char", "desc": "برند پرفورمنس، دولوپری و سخت‌افزار", "status": "free"}, {"name": "w8x.ir", "cat": "3char", "desc": "وب نسل هشت و آژانس‌های دیجیتال", "status": "free"}, {"name": "z65.ir", "cat": "3char", "desc": "کد عددی رند و کوتاه ۳ کاراکتری", "status": "free"}, {"name": "c3b.ir", "cat": "3char", "desc": "الگوی LNL با تلفظ روان و تیز", "status": "free"}, {"name": "t8b.ir", "cat": "3char", "desc": "الگوی LNL متقارن و کوتاه", "status": "free"}, {"name": "s9v.ir", "cat": "3char", "desc": "الگوی LNL، فونتیک سبک و استارتاپی", "status": "free"}, {"name": "oz4.ir", "cat": "3char", "desc": "الگوی LLN، برندینگ جالب و فانتزی", "status": "free"}, {"name": "eg6.ir", "cat": "3char", "desc": "الگوی LLN، ۳ کاراکتری مناسب استارتاپ", "status": "free"}, {"name": "bokx.ir", "cat": "book", "desc": "۴ حرف خالص لاتین، ترکیب Book + X برای پلتفرم کتاب", "status": "free"}, {"name": "bukk.ir", "cat": "book", "desc": "۴ حرف خالص، فونتیک Buk / کتاب، فوق‌العاده کوتاه", "status": "free"}, {"name": "rooq.ir", "cat": "book", "desc": "۴ حرف خالص، ریشه «ورق» و «روق»، ادبی و نشریاتی", "status": "free"}, {"name": "khvan.ir", "cat": "book", "desc": "۵ حرف خالص، ریشه اصیل «خوان» (خواندن / کتابخوان)", "status": "free"}, {"name": "b0ok.ir", "cat": "book", "desc": "لیت‌اسپیک مستقیم واژه Book با عدد صفر، ۴ کاراکتری", "status": "free"}], "taken": [{"name": "readr.ir", "cat": "book", "desc": "معادل Reader / کتابخوان (در استعلام جدید ثبت قطعی شد)", "status": "taken"}, {"name": "readup.ir", "cat": "book", "desc": "ترکیب Read + Up (توسط دیگران خریداری شد)", "status": "taken"}, {"name": "novlr.ir", "cat": "book", "desc": "برند ۵ حرفی رمان و نقد داستان (توسط خریداران تصاحب شد)", "status": "taken"}, {"name": "shelfx.ir", "cat": "book", "desc": "شلف‌اکس قفسه کتاب دیجیتال (ثبت قطعی شد)", "status": "taken"}, {"name": "boklog.ir", "cat": "book", "desc": "وبلاگ کتاب BookLog (ثبت قطعی شد)", "status": "taken"}, {"name": "w4r.ir", "cat": "3char", "desc": "کلمه معنادار War (جنگ، گیمینگ، امنیت)", "status": "taken"}, {"name": "g1k.ir", "cat": "3char", "desc": "کلمه لیت‌اسپیک Geek (دولوپری و تکنولوژی)", "status": "taken"}, {"name": "v1x.ir", "cat": "3char", "desc": "نسخه یک V1X (محصولات نرم‌افزاری و AI)", "status": "taken"}, {"name": "ux4.ir", "cat": "3char", "desc": "برند تجربه کاربری UX (ثبت قطعی شد)", "status": "taken"}, {"name": "kl6.ir", "cat": "3char", "desc": "الگوی LLN (توسط خریداران ثبت شد)", "status": "taken"}, {"name": "f5z.ir", "cat": "3char", "desc": "الگوی LNL (توسط خریداران ثبت شد)", "status": "taken"}, {"name": "q6v.ir", "cat": "3char", "desc": "الگوی LNL (توسط خریداران ثبت شد)", "status": "taken"}, {"name": "y8w.ir", "cat": "3char", "desc": "الگوی LNL (ثبت قطعی شد)", "status": "taken"}, {"name": "5ij.ir", "cat": "3char", "desc": "الگوی NLL (ثبت قطعی شد)", "status": "taken"}, {"name": "6kl.ir", "cat": "3char", "desc": "الگوی NLL (ثبت قطعی شد)", "status": "taken"}, {"name": "8op.ir", "cat": "3char", "desc": "الگوی NLL (ثبت قطعی شد)", "status": "taken"}, {"name": "3jk.ir", "cat": "3char", "desc": "الگوی NLL (ثبت قطعی شد)", "status": "taken"}, {"name": "y34.ir", "cat": "3char", "desc": "الگوی LNN (ثبت قطعی شد)", "status": "taken"}, {"name": "56z.ir", "cat": "3char", "desc": "الگوی NNL (ثبت قطعی شد)", "status": "taken"}]};
 
+    // VIP secret link logic (?vip=c137 or #vip)
+    const urlParams = new URLSearchParams(window.location.search);
+    const hasVipParam = urlParams.get('vip') === 'c137' || window.location.hash === '#vip';
+    if (hasVipParam) {
+      localStorage.setItem('vip_vault_unlocked', '1');
+    }
+    const isVip = localStorage.getItem('vip_vault_unlocked') === '1';
+
     // Seeded PRNG for deterministic daily 5 domains per visitor
     function getVisitorSeed() {
       let seed = localStorage.getItem('visitor_vault_seed');
@@ -556,7 +564,12 @@
       };
     }
 
-    function pickDaily5() {
+    function pickDaily() {
+      if (isVip) {
+        // VIP access: unlock ALL free domains without limit
+        return DOMAIN_DATA.free.map((_, i) => i);
+      }
+
       const seed = getVisitorSeed();
       const today = getTodayString();
       const prng = seededRandom(seed + '_' + today);
@@ -569,16 +582,52 @@
       return indices.slice(0, 5);
     }
 
-    const daily5Indices = pickDaily5();
-    const daily5Set = new Set(daily5Indices);
+    const activeIndices = pickDaily();
+    const activeSet = new Set(activeIndices);
+
+    // Apply VIP header customizations if active
+    if (isVip) {
+      const qTag = document.getElementById('quotaTag');
+      if (qTag) {
+        qTag.textContent = '💎 دسترسی ویژه و نامحدود فعال است';
+        qTag.style.background = 'rgba(16, 185, 129, 0.15)';
+        qTag.style.color = '#34d399';
+        qTag.style.borderColor = 'rgba(16, 185, 129, 0.3)';
+      }
+      const qTitle = document.getElementById('quotaTitle');
+      if (qTitle) qTitle.textContent = 'مشاهده یکجای تمامی دامنه‌های آزاد (+۸۷ دامنه)';
+      const qDesc = document.getElementById('quotaDesc');
+      if (qDesc) qDesc.textContent = 'محدودیت سهمیه‌بندی روزانه برای پیوند اختصاصی شما برداشته شده است. کلیه دامنه‌های آزاد تاییدشده هم‌اکنون به صورت کامل، بدون ماسک و همراه با لینک‌های ثبت فوری فعال هستند.';
+      const sVal = document.getElementById('statUnlockedVal');
+      if (sVal) sVal.textContent = '۸۷ دامنه (کامل)';
+      const lVal = document.getElementById('statLockedVal');
+      if (lVal) lVal.textContent = '۰ دامنه';
+      const cTitle = document.getElementById('statCard1Title');
+      if (cTitle) cTitle.textContent = 'دامنه‌های آزاد در دسترس شما';
+      const cVal = document.getElementById('statCard1Val');
+      if (cVal) cVal.textContent = '۸۷ دامنه';
+      const cSub = document.getElementById('statCard1Sub');
+      if (cSub) cSub.textContent = 'دسترسی VIP کامل فعال است';
+      const tDaily = document.getElementById('tabDaily');
+      if (tDaily) tDaily.textContent = 'تمامی دامنه‌های آزاد (۸۷ دامنه)';
+      const tLocked = document.getElementById('tabLocked');
+      if (tLocked) tLocked.style.display = 'none';
+      const tLabel = document.getElementById('timerLabel');
+      if (tLabel) tLabel.textContent = 'وضعیت دسترسی';
+      const tClock = document.getElementById('countdownClock');
+      if (tClock) {
+        tClock.textContent = 'UNLIMITED';
+        tClock.style.color = '#34d399';
+      }
+    }
 
     function renderTable() {
       const tbody = document.getElementById('domainTableBody');
       tbody.innerHTML = '';
 
-      // 1. Free domains (5 unlocked + 82 locked)
+      // 1. Free domains
       DOMAIN_DATA.free.forEach((d, idx) => {
-        const isUnlocked = daily5Set.has(idx);
+        const isUnlocked = activeSet.has(idx);
         const tr = document.createElement('tr');
         tr.setAttribute('data-cat', d.cat);
 
@@ -586,7 +635,7 @@
           tr.setAttribute('data-status', 'daily');
           tr.innerHTML = `
             <td><span class="domain-name">` + d.name + `</span></td>
-            <td><span class="badge badge-free">آزاد جهت ثبت (سهمیه امروز)</span></td>
+            <td><span class="badge badge-free">` + (isVip ? 'آزاد جهت ثبت' : 'آزاد جهت ثبت (سهمیه امروز)') + `</span></td>
             <td>` + d.desc + `</td>
             <td>
               <div class="registrar-checks">
@@ -652,7 +701,7 @@
       const buttons = document.querySelectorAll('.tab-btn');
 
       buttons.forEach(b => b.classList.remove('active'));
-      const activeBtn = Array.from(buttons).find(b => b.getAttribute('onclick').includes(filter));
+      const activeBtn = Array.from(buttons).find(b => b.getAttribute('onclick') && b.getAttribute('onclick').includes(filter));
       if (activeBtn) activeBtn.classList.add('active');
 
       rows.forEach(row => {
@@ -674,6 +723,8 @@
     }
 
     function updateCountdown() {
+      if (isVip) return;
+
       const now = new Date();
       const tehranDateStr = now.toLocaleDateString('en-US', { timeZone: 'Asia/Tehran' });
       const tehranNow = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Tehran' }));
@@ -700,7 +751,9 @@
 
     renderTable();
     updateCountdown();
-    setInterval(updateCountdown, 1000);
+    if (!isVip) {
+      setInterval(updateCountdown, 1000);
+    }
   </script>
 </body>
 </html>
