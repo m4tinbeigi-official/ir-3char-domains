@@ -1,0 +1,1856 @@
+{
+  "free": [
+    {
+      "name": "lb4.ir",
+      "cat": "3char",
+      "desc": "مخفف Lab 4 / آزمایشگاه نرم‌افزار و هوش مصنوعی",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "lb5.ir",
+      "cat": "3char",
+      "desc": "مخفف Lab 5 / استودیو تحقیق و توسعه فناوری",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "lb7.ir",
+      "cat": "3char",
+      "desc": "مخفف Lab 7 / آزمایشگاه کدنویسی و تحلیل داده",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "lb8.ir",
+      "cat": "3char",
+      "desc": "مخفف Lab 8 / مرکز فناوری و توسعه محصول",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "2wr.ir",
+      "cat": "3char book",
+      "desc": "الگوی NLL / دو نویسنده (2 Writers) و نشر دوطرفه",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "3wr.ir",
+      "cat": "3char book",
+      "desc": "الگوی NLL / وب سه و نویسندگی (3 Writers / Web3)",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "4wr.ir",
+      "cat": "3char book",
+      "desc": "الگوی NLL / چهار نویسنده و حلقه نویسندگان",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "5wr.ir",
+      "cat": "3char book",
+      "desc": "الگوی NLL / تحریریه ۵ نفره و مجله نویسی",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "7wr.ir",
+      "cat": "3char book",
+      "desc": "الگوی NLL / هفت نویسنده (7 Writers) و باشگاه ادبی",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "8wr.ir",
+      "cat": "3char book",
+      "desc": "الگوی NLL / هاب تولید محتوا و داستان‌نویسی",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "9wr.ir",
+      "cat": "3char book",
+      "desc": "الگوی NLL / کلاود محتوای ۹ نویسنده",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "5rd.ir",
+      "cat": "3char book",
+      "desc": "الگوی NLL / پنج کتابخوان (5 Readers) و باشگاه مطالعه",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "9rd.ir",
+      "cat": "3char book",
+      "desc": "الگوی NLL / کلاود نقد کتاب و بوک‌بلاگری",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "7tx.ir",
+      "cat": "3char book",
+      "desc": "الگوی NLL / هفت متن (7 Text) و بلاگ‌پست کوتاه",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "8tx.ir",
+      "cat": "3char book",
+      "desc": "الگوی NLL / سیستم نشر متن و یادداشت آنلاین",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "wr2.ir",
+      "cat": "3char book",
+      "desc": "کلمه مخفف Write 2 / مناسب پلتفرم نویسندگان و نشر دیجیتال",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "wr3.ir",
+      "cat": "3char book",
+      "desc": "کلمه مخفف Write 3 / وب نسل سه برای محتوا و وبلاگ‌نویسی",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "wr8.ir",
+      "cat": "3char book",
+      "desc": "کلمه مخفف Write 8 / نشریه مدرن و محتوای بلاگری",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "wr9.ir",
+      "cat": "3char book",
+      "desc": "کلمه مخفف Write 9 / کلاود محتوا و داستان‌نویسی",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "ln6.ir",
+      "cat": "3char book",
+      "desc": "معادل Line 6 / سطر ششم و ادبیات خطی",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "lx8.ir",
+      "cat": "3char",
+      "desc": "سیستم نرم‌افزاری و تکنولوژی مدرن (LX 8)",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "zx8.ir",
+      "cat": "3char",
+      "desc": "برند تک و پردازشی ZX 8",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "w8x.ir",
+      "cat": "3char",
+      "desc": "وب نسل هشت و آژانس‌های دیجیتال",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "z65.ir",
+      "cat": "3char",
+      "desc": "کد عددی رند و کوتاه ۳ کاراکتری",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "c3b.ir",
+      "cat": "3char",
+      "desc": "الگوی LNL با تلفظ روان و تیز",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "t8b.ir",
+      "cat": "3char",
+      "desc": "الگوی LNL متقارن و کوتاه",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "s9v.ir",
+      "cat": "3char",
+      "desc": "الگوی LNL، فونتیک سبک و استارتاپی",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "eg6.ir",
+      "cat": "3char",
+      "desc": "الگوی LLN، ۳ کاراکتری مناسب استارتاپ",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "bukk.ir",
+      "cat": "book",
+      "desc": "۴ حرف خالص، فونتیک Buk / کتاب، فوق‌العاده کوتاه",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "khvan.ir",
+      "cat": "book",
+      "desc": "۵ حرف خالص، ریشه اصیل «خوان» (خواندن / کتابخوان)",
+      "status": "free",
+      "is_new": false
+    },
+    {
+      "name": "qa3.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Quality Assurance / آزمون و تضمین کیفیت نرم‌افزار، سنجش کارایی و سامانه پرسش و پاسخ Q&A (qa3.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "qa4.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Quality Assurance / آزمون و تضمین کیفیت نرم‌افزار، سنجش کارایی و سامانه پرسش و پاسخ Q&A (qa4.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "qa5.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Quality Assurance / آزمون و تضمین کیفیت نرم‌افزار، سنجش کارایی و سامانه پرسش و پاسخ Q&A (qa5.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "qa6.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Quality Assurance / آزمون و تضمین کیفیت نرم‌افزار، سنجش کارایی و سامانه پرسش و پاسخ Q&A (qa6.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "qa7.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Quality Assurance / آزمون و تضمین کیفیت نرم‌افزار، سنجش کارایی و سامانه پرسش و پاسخ Q&A (qa7.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "qa8.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Quality Assurance / آزمون و تضمین کیفیت نرم‌افزار، سنجش کارایی و سامانه پرسش و پاسخ Q&A (qa8.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "qa9.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Quality Assurance / آزمون و تضمین کیفیت نرم‌افزار، سنجش کارایی و سامانه پرسش و پاسخ Q&A (qa9.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "2qa.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Quality Assurance / آزمون و تضمین کیفیت نرم‌افزار، سنجش کارایی و سامانه پرسش و پاسخ Q&A (2qa.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "3qa.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Quality Assurance / آزمون و تضمین کیفیت نرم‌افزار، سنجش کارایی و سامانه پرسش و پاسخ Q&A (3qa.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "5qa.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Quality Assurance / آزمون و تضمین کیفیت نرم‌افزار، سنجش کارایی و سامانه پرسش و پاسخ Q&A (5qa.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6qa.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Quality Assurance / آزمون و تضمین کیفیت نرم‌افزار، سنجش کارایی و سامانه پرسش و پاسخ Q&A (6qa.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "7qa.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Quality Assurance / آزمون و تضمین کیفیت نرم‌افزار، سنجش کارایی و سامانه پرسش و پاسخ Q&A (7qa.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "8qa.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Quality Assurance / آزمون و تضمین کیفیت نرم‌افزار، سنجش کارایی و سامانه پرسش و پاسخ Q&A (8qa.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "9qa.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Quality Assurance / آزمون و تضمین کیفیت نرم‌افزار، سنجش کارایی و سامانه پرسش و پاسخ Q&A (9qa.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6ml.ir",
+      "cat": "3char ai dev",
+      "desc": "مخفف Machine Learning / زیرساخت هوش مصنوعی، یادگیری ماشین و پردازش داده (6ml.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "pb1.ir",
+      "cat": "3char book",
+      "desc": "مخفف Publish / نشر الکترونیک، انتشارات دیجیتال کتاب و مطبوعات آنلاین (pb1.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "pb4.ir",
+      "cat": "3char book",
+      "desc": "مخفف Publish / نشر الکترونیک، انتشارات دیجیتال کتاب و مطبوعات آنلاین (pb4.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "pb5.ir",
+      "cat": "3char book",
+      "desc": "مخفف Publish / نشر الکترونیک، انتشارات دیجیتال کتاب و مطبوعات آنلاین (pb5.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "pb8.ir",
+      "cat": "3char book",
+      "desc": "مخفف Publish / نشر الکترونیک، انتشارات دیجیتال کتاب و مطبوعات آنلاین (pb8.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "pb9.ir",
+      "cat": "3char book",
+      "desc": "مخفف Publish / نشر الکترونیک، انتشارات دیجیتال کتاب و مطبوعات آنلاین (pb9.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "3pb.ir",
+      "cat": "3char book",
+      "desc": "مخفف Publish / نشر الکترونیک، انتشارات دیجیتال کتاب و مطبوعات آنلاین (3pb.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "5pb.ir",
+      "cat": "3char book",
+      "desc": "مخفف Publish / نشر الکترونیک، انتشارات دیجیتال کتاب و مطبوعات آنلاین (5pb.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6pb.ir",
+      "cat": "3char book",
+      "desc": "مخفف Publish / نشر الکترونیک، انتشارات دیجیتال کتاب و مطبوعات آنلاین (6pb.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "7pb.ir",
+      "cat": "3char book",
+      "desc": "مخفف Publish / نشر الکترونیک، انتشارات دیجیتال کتاب و مطبوعات آنلاین (7pb.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "8pb.ir",
+      "cat": "3char book",
+      "desc": "مخفف Publish / نشر الکترونیک، انتشارات دیجیتال کتاب و مطبوعات آنلاین (8pb.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "9pb.ir",
+      "cat": "3char book",
+      "desc": "مخفف Publish / نشر الکترونیک، انتشارات دیجیتال کتاب و مطبوعات آنلاین (9pb.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "3bk.ir",
+      "cat": "3char book",
+      "desc": "مخفف واژه Book / پلتفرم معرفی و نقد کتاب، کتابفروشی اینترنتی و بوک‌بلاگری (3bk.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "5bk.ir",
+      "cat": "3char book",
+      "desc": "مخفف واژه Book / پلتفرم معرفی و نقد کتاب، کتابفروشی اینترنتی و بوک‌بلاگری (5bk.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6bk.ir",
+      "cat": "3char book",
+      "desc": "مخفف واژه Book / پلتفرم معرفی و نقد کتاب، کتابفروشی اینترنتی و بوک‌بلاگری (6bk.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "7bk.ir",
+      "cat": "3char book",
+      "desc": "مخفف واژه Book / پلتفرم معرفی و نقد کتاب، کتابفروشی اینترنتی و بوک‌بلاگری (7bk.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "9bk.ir",
+      "cat": "3char book",
+      "desc": "مخفف واژه Book / پلتفرم معرفی و نقد کتاب، کتابفروشی اینترنتی و بوک‌بلاگری (9bk.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "4rd.ir",
+      "cat": "3char book",
+      "desc": "مخفف Reader / باشگاه کتابخوان‌ها و بررسی تخصصی آثار مکتوب (4rd.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6tx.ir",
+      "cat": "3char book",
+      "desc": "مخفف Text / سامانه مینیمال نشر متن، جستارنویسی و یادداشت آنلاین (6tx.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "1wr.ir",
+      "cat": "3char book",
+      "desc": "مخفف Writer / انجمن نویسندگان مستقل، تولید محتوا و وبلاگ‌نویسی عمیق (1wr.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6wr.ir",
+      "cat": "3char book",
+      "desc": "مخفف Writer / انجمن نویسندگان مستقل، تولید محتوا و وبلاگ‌نویسی عمیق (6wr.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "ln9.ir",
+      "cat": "3char book",
+      "desc": "معادل Line / خط و ادبیات زنجیره‌ای، سطرنگاری و داستان کوتاه (ln9.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "2no.ir",
+      "cat": "3char book",
+      "desc": "مخفف Novel / ادبیات داستانی، رمان‌خوانی معاصر و حلقه نقد داستان (2no.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "3no.ir",
+      "cat": "3char book",
+      "desc": "مخفف Novel / ادبیات داستانی، رمان‌خوانی معاصر و حلقه نقد داستان (3no.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6no.ir",
+      "cat": "3char book",
+      "desc": "مخفف Novel / ادبیات داستانی، رمان‌خوانی معاصر و حلقه نقد داستان (6no.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "8no.ir",
+      "cat": "3char book",
+      "desc": "مخفف Novel / ادبیات داستانی، رمان‌خوانی معاصر و حلقه نقد داستان (8no.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6li.ir",
+      "cat": "3char book",
+      "desc": "مخفف Library / کتابخانه مجازی، گنجینه اسناد و مقالات و پایگاه مطالعه (6li.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "8li.ir",
+      "cat": "3char book",
+      "desc": "مخفف Library / کتابخانه مجازی، گنجینه اسناد و مقالات و پایگاه مطالعه (8li.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "9li.ir",
+      "cat": "3char book",
+      "desc": "مخفف Library / کتابخانه مجازی، گنجینه اسناد و مقالات و پایگاه مطالعه (9li.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "4po.ir",
+      "cat": "3char media book",
+      "desc": "مخفف Podcast / پلتفرم صوت، پادکست و بوک‌کست‌های تخصصی (4po.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "5po.ir",
+      "cat": "3char media book",
+      "desc": "مخفف Podcast / پلتفرم صوت، پادکست و بوک‌کست‌های تخصصی (5po.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6po.ir",
+      "cat": "3char media book",
+      "desc": "مخفف Podcast / پلتفرم صوت، پادکست و بوک‌کست‌های تخصصی (6po.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "fm4.ir",
+      "cat": "3char media book",
+      "desc": "موج رادیویی FM / رسانه صوتی، پادکست‌های تحلیلی و نشر کتاب صوتی (fm4.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "3fm.ir",
+      "cat": "3char media book",
+      "desc": "موج رادیویی FM / رسانه صوتی، پادکست‌های تحلیلی و نشر کتاب صوتی (3fm.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "4fm.ir",
+      "cat": "3char media book",
+      "desc": "موج رادیویی FM / رسانه صوتی، پادکست‌های تحلیلی و نشر کتاب صوتی (4fm.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "5fm.ir",
+      "cat": "3char media book",
+      "desc": "موج رادیویی FM / رسانه صوتی، پادکست‌های تحلیلی و نشر کتاب صوتی (5fm.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6fm.ir",
+      "cat": "3char media book",
+      "desc": "موج رادیویی FM / رسانه صوتی، پادکست‌های تحلیلی و نشر کتاب صوتی (6fm.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "8fm.ir",
+      "cat": "3char media book",
+      "desc": "موج رادیویی FM / رسانه صوتی، پادکست‌های تحلیلی و نشر کتاب صوتی (8fm.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "9fm.ir",
+      "cat": "3char media book",
+      "desc": "موج رادیویی FM / رسانه صوتی، پادکست‌های تحلیلی و نشر کتاب صوتی (9fm.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "fl5.ir",
+      "cat": "3char media dev",
+      "desc": "مخفف Film یا فریم‌ورک Flutter / آرشیو فیلم و سینما یا توسعه چندسکویی نرم‌افزار (fl5.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "fl7.ir",
+      "cat": "3char media dev",
+      "desc": "مخفف Film یا فریم‌ورک Flutter / آرشیو فیلم و سینما یا توسعه چندسکویی نرم‌افزار (fl7.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "2fl.ir",
+      "cat": "3char media dev",
+      "desc": "مخفف Film یا فریم‌ورک Flutter / آرشیو فیلم و سینما یا توسعه چندسکویی نرم‌افزار (2fl.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "3fl.ir",
+      "cat": "3char media dev",
+      "desc": "مخفف Film یا فریم‌ورک Flutter / آرشیو فیلم و سینما یا توسعه چندسکویی نرم‌افزار (3fl.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "4fl.ir",
+      "cat": "3char media dev",
+      "desc": "مخفف Film یا فریم‌ورک Flutter / آرشیو فیلم و سینما یا توسعه چندسکویی نرم‌افزار (4fl.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "5fl.ir",
+      "cat": "3char media dev",
+      "desc": "مخفف Film یا فریم‌ورک Flutter / آرشیو فیلم و سینما یا توسعه چندسکویی نرم‌افزار (5fl.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6fl.ir",
+      "cat": "3char media dev",
+      "desc": "مخفف Film یا فریم‌ورک Flutter / آرشیو فیلم و سینما یا توسعه چندسکویی نرم‌افزار (6fl.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "7fl.ir",
+      "cat": "3char media dev",
+      "desc": "مخفف Film یا فریم‌ورک Flutter / آرشیو فیلم و سینما یا توسعه چندسکویی نرم‌افزار (7fl.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "8fl.ir",
+      "cat": "3char media dev",
+      "desc": "مخفف Film یا فریم‌ورک Flutter / آرشیو فیلم و سینما یا توسعه چندسکویی نرم‌افزار (8fl.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "9fl.ir",
+      "cat": "3char media dev",
+      "desc": "مخفف Film یا فریم‌ورک Flutter / آرشیو فیلم و سینما یا توسعه چندسکویی نرم‌افزار (9fl.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "vd2.ir",
+      "cat": "3char media",
+      "desc": "مخفف Video / سرویس اشتراک و پخش ویدیو، استریم رسانه و تولید محتوای تصویری (vd2.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "vd3.ir",
+      "cat": "3char media",
+      "desc": "مخفف Video / سرویس اشتراک و پخش ویدیو، استریم رسانه و تولید محتوای تصویری (vd3.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "vd4.ir",
+      "cat": "3char media",
+      "desc": "مخفف Video / سرویس اشتراک و پخش ویدیو، استریم رسانه و تولید محتوای تصویری (vd4.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "vd5.ir",
+      "cat": "3char media",
+      "desc": "مخفف Video / سرویس اشتراک و پخش ویدیو، استریم رسانه و تولید محتوای تصویری (vd5.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "vd6.ir",
+      "cat": "3char media",
+      "desc": "مخفف Video / سرویس اشتراک و پخش ویدیو، استریم رسانه و تولید محتوای تصویری (vd6.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "vd7.ir",
+      "cat": "3char media",
+      "desc": "مخفف Video / سرویس اشتراک و پخش ویدیو، استریم رسانه و تولید محتوای تصویری (vd7.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "vd9.ir",
+      "cat": "3char media",
+      "desc": "مخفف Video / سرویس اشتراک و پخش ویدیو، استریم رسانه و تولید محتوای تصویری (vd9.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "1vd.ir",
+      "cat": "3char media",
+      "desc": "مخفف Video / سرویس اشتراک و پخش ویدیو، استریم رسانه و تولید محتوای تصویری (1vd.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "2vd.ir",
+      "cat": "3char media",
+      "desc": "مخفف Video / سرویس اشتراک و پخش ویدیو، استریم رسانه و تولید محتوای تصویری (2vd.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "3vd.ir",
+      "cat": "3char media",
+      "desc": "مخفف Video / سرویس اشتراک و پخش ویدیو، استریم رسانه و تولید محتوای تصویری (3vd.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "4vd.ir",
+      "cat": "3char media",
+      "desc": "مخفف Video / سرویس اشتراک و پخش ویدیو، استریم رسانه و تولید محتوای تصویری (4vd.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "5vd.ir",
+      "cat": "3char media",
+      "desc": "مخفف Video / سرویس اشتراک و پخش ویدیو، استریم رسانه و تولید محتوای تصویری (5vd.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6vd.ir",
+      "cat": "3char media",
+      "desc": "مخفف Video / سرویس اشتراک و پخش ویدیو، استریم رسانه و تولید محتوای تصویری (6vd.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "7vd.ir",
+      "cat": "3char media",
+      "desc": "مخفف Video / سرویس اشتراک و پخش ویدیو، استریم رسانه و تولید محتوای تصویری (7vd.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "8vd.ir",
+      "cat": "3char media",
+      "desc": "مخفف Video / سرویس اشتراک و پخش ویدیو، استریم رسانه و تولید محتوای تصویری (8vd.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "5md.ir",
+      "cat": "3char media",
+      "desc": "مخفف Media یا فرمت Markdown / هاب انتشار رسانه‌ای و یادداشت‌نویسی مدرن (5md.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6md.ir",
+      "cat": "3char media",
+      "desc": "مخفف Media یا فرمت Markdown / هاب انتشار رسانه‌ای و یادداشت‌نویسی مدرن (6md.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "8md.ir",
+      "cat": "3char media",
+      "desc": "مخفف Media یا فرمت Markdown / هاب انتشار رسانه‌ای و یادداشت‌نویسی مدرن (8md.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "9md.ir",
+      "cat": "3char media",
+      "desc": "مخفف Media یا فرمت Markdown / هاب انتشار رسانه‌ای و یادداشت‌نویسی مدرن (9md.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "5ui.ir",
+      "cat": "3char dev",
+      "desc": "مخفف User Interface / فریم‌ورک رابط کاربری، دیزاین سیستم و کتابخانه کامپوننت (5ui.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6ui.ir",
+      "cat": "3char dev",
+      "desc": "مخفف User Interface / فریم‌ورک رابط کاربری، دیزاین سیستم و کتابخانه کامپوننت (6ui.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "9ui.ir",
+      "cat": "3char dev",
+      "desc": "مخفف User Interface / فریم‌ورک رابط کاربری، دیزاین سیستم و کتابخانه کامپوننت (9ui.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "5ux.ir",
+      "cat": "3char dev",
+      "desc": "مخفف User Experience / استودیو تجربه کاربری، تحقیقات محصول و طراحی تجربه دیجیتال (5ux.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6ux.ir",
+      "cat": "3char dev",
+      "desc": "مخفف User Experience / استودیو تجربه کاربری، تحقیقات محصول و طراحی تجربه دیجیتال (6ux.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "8ux.ir",
+      "cat": "3char dev",
+      "desc": "مخفف User Experience / استودیو تجربه کاربری، تحقیقات محصول و طراحی تجربه دیجیتال (8ux.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "9ux.ir",
+      "cat": "3char dev",
+      "desc": "مخفف User Experience / استودیو تجربه کاربری، تحقیقات محصول و طراحی تجربه دیجیتال (9ux.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "5ar.ir",
+      "cat": "3char ai",
+      "desc": "مخفف Augmented Reality / واقعیت افزوده و پلتفرم‌های بینایی ماشین و هوش بصری (5ar.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "1vr.ir",
+      "cat": "3char ai",
+      "desc": "مخفف Virtual Reality / واقعیت مجازی، متاورس و دنیاهای سه‌بعدی تعاملی (1vr.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "2vr.ir",
+      "cat": "3char ai",
+      "desc": "مخفف Virtual Reality / واقعیت مجازی، متاورس و دنیاهای سه‌بعدی تعاملی (2vr.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "3vr.ir",
+      "cat": "3char ai",
+      "desc": "مخفف Virtual Reality / واقعیت مجازی، متاورس و دنیاهای سه‌بعدی تعاملی (3vr.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "5vr.ir",
+      "cat": "3char ai",
+      "desc": "مخفف Virtual Reality / واقعیت مجازی، متاورس و دنیاهای سه‌بعدی تعاملی (5vr.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6vr.ir",
+      "cat": "3char ai",
+      "desc": "مخفف Virtual Reality / واقعیت مجازی، متاورس و دنیاهای سه‌بعدی تعاملی (6vr.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "9vr.ir",
+      "cat": "3char ai",
+      "desc": "مخفف Virtual Reality / واقعیت مجازی، متاورس و دنیاهای سه‌بعدی تعاملی (9vr.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "bx6.ir",
+      "cat": "3char",
+      "desc": "مخفف Box / جعبه ابزار آنلاین، زیرساخت ذخیره‌سازی ابری و پلتفرم یکپارچه (bx6.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "bx8.ir",
+      "cat": "3char",
+      "desc": "مخفف Box / جعبه ابزار آنلاین، زیرساخت ذخیره‌سازی ابری و پلتفرم یکپارچه (bx8.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "bx9.ir",
+      "cat": "3char",
+      "desc": "مخفف Box / جعبه ابزار آنلاین، زیرساخت ذخیره‌سازی ابری و پلتفرم یکپارچه (bx9.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "1bx.ir",
+      "cat": "3char",
+      "desc": "مخفف Box / جعبه ابزار آنلاین، زیرساخت ذخیره‌سازی ابری و پلتفرم یکپارچه (1bx.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "2bx.ir",
+      "cat": "3char",
+      "desc": "مخفف Box / جعبه ابزار آنلاین، زیرساخت ذخیره‌سازی ابری و پلتفرم یکپارچه (2bx.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "3bx.ir",
+      "cat": "3char",
+      "desc": "مخفف Box / جعبه ابزار آنلاین، زیرساخت ذخیره‌سازی ابری و پلتفرم یکپارچه (3bx.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "4bx.ir",
+      "cat": "3char",
+      "desc": "مخفف Box / جعبه ابزار آنلاین، زیرساخت ذخیره‌سازی ابری و پلتفرم یکپارچه (4bx.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "5bx.ir",
+      "cat": "3char",
+      "desc": "مخفف Box / جعبه ابزار آنلاین، زیرساخت ذخیره‌سازی ابری و پلتفرم یکپارچه (5bx.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6bx.ir",
+      "cat": "3char",
+      "desc": "مخفف Box / جعبه ابزار آنلاین، زیرساخت ذخیره‌سازی ابری و پلتفرم یکپارچه (6bx.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "7bx.ir",
+      "cat": "3char",
+      "desc": "مخفف Box / جعبه ابزار آنلاین، زیرساخت ذخیره‌سازی ابری و پلتفرم یکپارچه (7bx.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "8bx.ir",
+      "cat": "3char",
+      "desc": "مخفف Box / جعبه ابزار آنلاین، زیرساخت ذخیره‌سازی ابری و پلتفرم یکپارچه (8bx.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "hq2.ir",
+      "cat": "3char",
+      "desc": "مخفف HeadQuarters / ستاد مرکزی، مرکز فرماندهی و هلدینگ‌های فناورانه (hq2.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "hq3.ir",
+      "cat": "3char",
+      "desc": "مخفف HeadQuarters / ستاد مرکزی، مرکز فرماندهی و هلدینگ‌های فناورانه (hq3.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "hq9.ir",
+      "cat": "3char",
+      "desc": "مخفف HeadQuarters / ستاد مرکزی، مرکز فرماندهی و هلدینگ‌های فناورانه (hq9.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "1hq.ir",
+      "cat": "3char",
+      "desc": "مخفف HeadQuarters / ستاد مرکزی، مرکز فرماندهی و هلدینگ‌های فناورانه (1hq.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "2hq.ir",
+      "cat": "3char",
+      "desc": "مخفف HeadQuarters / ستاد مرکزی، مرکز فرماندهی و هلدینگ‌های فناورانه (2hq.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "3hq.ir",
+      "cat": "3char",
+      "desc": "مخفف HeadQuarters / ستاد مرکزی، مرکز فرماندهی و هلدینگ‌های فناورانه (3hq.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "4hq.ir",
+      "cat": "3char",
+      "desc": "مخفف HeadQuarters / ستاد مرکزی، مرکز فرماندهی و هلدینگ‌های فناورانه (4hq.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6hq.ir",
+      "cat": "3char",
+      "desc": "مخفف HeadQuarters / ستاد مرکزی، مرکز فرماندهی و هلدینگ‌های فناورانه (6hq.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "7hq.ir",
+      "cat": "3char",
+      "desc": "مخفف HeadQuarters / ستاد مرکزی، مرکز فرماندهی و هلدینگ‌های فناورانه (7hq.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "8hq.ir",
+      "cat": "3char",
+      "desc": "مخفف HeadQuarters / ستاد مرکزی، مرکز فرماندهی و هلدینگ‌های فناورانه (8hq.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "9hq.ir",
+      "cat": "3char",
+      "desc": "مخفف HeadQuarters / ستاد مرکزی، مرکز فرماندهی و هلدینگ‌های فناورانه (9hq.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "3bt.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Bit / پروتکل‌های رمزنگاری، فناوری رمزارز و محاسبات خرد (3bt.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "5bt.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Bit / پروتکل‌های رمزنگاری، فناوری رمزارز و محاسبات خرد (5bt.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6bt.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Bit / پروتکل‌های رمزنگاری، فناوری رمزارز و محاسبات خرد (6bt.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "cd2.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Code یا Cloud Data / استودیو کدنویسی، داده‌های ابری و پردازش الگوریتم (cd2.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "3cd.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Code یا Cloud Data / استودیو کدنویسی، داده‌های ابری و پردازش الگوریتم (3cd.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "5cd.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Code یا Cloud Data / استودیو کدنویسی، داده‌های ابری و پردازش الگوریتم (5cd.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6cd.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Code یا Cloud Data / استودیو کدنویسی، داده‌های ابری و پردازش الگوریتم (6cd.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "7cd.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Code یا Cloud Data / استودیو کدنویسی، داده‌های ابری و پردازش الگوریتم (7cd.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "8cd.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Code یا Cloud Data / استودیو کدنویسی، داده‌های ابری و پردازش الگوریتم (8cd.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "9cd.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Code یا Cloud Data / استودیو کدنویسی، داده‌های ابری و پردازش الگوریتم (9cd.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "dv2.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Developer / پلتفرم توسعه‌دهندگان، مهندسی نرم‌افزار و ابزارهای برنامه‌نویسی (dv2.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "dv3.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Developer / پلتفرم توسعه‌دهندگان، مهندسی نرم‌افزار و ابزارهای برنامه‌نویسی (dv3.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "dv4.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Developer / پلتفرم توسعه‌دهندگان، مهندسی نرم‌افزار و ابزارهای برنامه‌نویسی (dv4.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "dv6.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Developer / پلتفرم توسعه‌دهندگان، مهندسی نرم‌افزار و ابزارهای برنامه‌نویسی (dv6.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "1dv.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Developer / پلتفرم توسعه‌دهندگان، مهندسی نرم‌افزار و ابزارهای برنامه‌نویسی (1dv.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "2dv.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Developer / پلتفرم توسعه‌دهندگان، مهندسی نرم‌افزار و ابزارهای برنامه‌نویسی (2dv.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "5dv.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Developer / پلتفرم توسعه‌دهندگان، مهندسی نرم‌افزار و ابزارهای برنامه‌نویسی (5dv.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6dv.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Developer / پلتفرم توسعه‌دهندگان، مهندسی نرم‌افزار و ابزارهای برنامه‌نویسی (6dv.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "7dv.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Developer / پلتفرم توسعه‌دهندگان، مهندسی نرم‌افزار و ابزارهای برنامه‌نویسی (7dv.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "8dv.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Developer / پلتفرم توسعه‌دهندگان، مهندسی نرم‌افزار و ابزارهای برنامه‌نویسی (8dv.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "9dv.ir",
+      "cat": "3char dev",
+      "desc": "مخفف Developer / پلتفرم توسعه‌دهندگان، مهندسی نرم‌افزار و ابزارهای برنامه‌نویسی (9dv.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "hb4.ir",
+      "cat": "3char",
+      "desc": "مخفف Hub / مرکز تبادل داده، هاب نوآوری و ارتباطات شبکه‌ای استارتاپی (hb4.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "hb5.ir",
+      "cat": "3char",
+      "desc": "مخفف Hub / مرکز تبادل داده، هاب نوآوری و ارتباطات شبکه‌ای استارتاپی (hb5.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "hb6.ir",
+      "cat": "3char",
+      "desc": "مخفف Hub / مرکز تبادل داده، هاب نوآوری و ارتباطات شبکه‌ای استارتاپی (hb6.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "hb8.ir",
+      "cat": "3char",
+      "desc": "مخفف Hub / مرکز تبادل داده، هاب نوآوری و ارتباطات شبکه‌ای استارتاپی (hb8.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "2hb.ir",
+      "cat": "3char",
+      "desc": "مخفف Hub / مرکز تبادل داده، هاب نوآوری و ارتباطات شبکه‌ای استارتاپی (2hb.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "3hb.ir",
+      "cat": "3char",
+      "desc": "مخفف Hub / مرکز تبادل داده، هاب نوآوری و ارتباطات شبکه‌ای استارتاپی (3hb.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "5hb.ir",
+      "cat": "3char",
+      "desc": "مخفف Hub / مرکز تبادل داده، هاب نوآوری و ارتباطات شبکه‌ای استارتاپی (5hb.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6hb.ir",
+      "cat": "3char",
+      "desc": "مخفف Hub / مرکز تبادل داده، هاب نوآوری و ارتباطات شبکه‌ای استارتاپی (6hb.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "8hb.ir",
+      "cat": "3char",
+      "desc": "مخفف Hub / مرکز تبادل داده، هاب نوآوری و ارتباطات شبکه‌ای استارتاپی (8hb.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "9hb.ir",
+      "cat": "3char",
+      "desc": "مخفف Hub / مرکز تبادل داده، هاب نوآوری و ارتباطات شبکه‌ای استارتاپی (9hb.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "by8.ir",
+      "cat": "3char",
+      "desc": "مخفف Buy / سامانه فروش آنلاین، مارکت‌پلیس سریع و خرید ابری کالا (by8.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "5by.ir",
+      "cat": "3char",
+      "desc": "مخفف Buy / سامانه فروش آنلاین، مارکت‌پلیس سریع و خرید ابری کالا (5by.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6by.ir",
+      "cat": "3char",
+      "desc": "مخفف Buy / سامانه فروش آنلاین، مارکت‌پلیس سریع و خرید ابری کالا (6by.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "7by.ir",
+      "cat": "3char",
+      "desc": "مخفف Buy / سامانه فروش آنلاین، مارکت‌پلیس سریع و خرید ابری کالا (7by.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "8by.ir",
+      "cat": "3char",
+      "desc": "مخفف Buy / سامانه فروش آنلاین، مارکت‌پلیس سریع و خرید ابری کالا (8by.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "py4.ir",
+      "cat": "3char dev",
+      "desc": "برندینگ زبان پایتون (Python) یا فین‌تک و پرداخت الکترونیک (Pay) با تلفظ کوتاه (py4.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "py8.ir",
+      "cat": "3char dev",
+      "desc": "برندینگ زبان پایتون (Python) یا فین‌تک و پرداخت الکترونیک (Pay) با تلفظ کوتاه (py8.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "py9.ir",
+      "cat": "3char dev",
+      "desc": "برندینگ زبان پایتون (Python) یا فین‌تک و پرداخت الکترونیک (Pay) با تلفظ کوتاه (py9.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "1py.ir",
+      "cat": "3char dev",
+      "desc": "برندینگ زبان پایتون (Python) یا فین‌تک و پرداخت الکترونیک (Pay) با تلفظ کوتاه (1py.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "3py.ir",
+      "cat": "3char dev",
+      "desc": "برندینگ زبان پایتون (Python) یا فین‌تک و پرداخت الکترونیک (Pay) با تلفظ کوتاه (3py.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "6py.ir",
+      "cat": "3char dev",
+      "desc": "برندینگ زبان پایتون (Python) یا فین‌تک و پرداخت الکترونیک (Pay) با تلفظ کوتاه (6py.ir)",
+      "status": "free",
+      "is_new": true
+    },
+    {
+      "name": "9py.ir",
+      "cat": "3char dev",
+      "desc": "برندینگ زبان پایتون (Python) یا فین‌تک و پرداخت الکترونیک (Pay) با تلفظ کوتاه (9py.ir)",
+      "status": "free",
+      "is_new": true
+    }
+  ],
+  "taken": [
+    {
+      "name": "lb3.ir",
+      "cat": "3char",
+      "desc": "مخفف Lab 3 / آزمایشگاه تحقیق و توسعه نسل ۳ (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "lb6.ir",
+      "cat": "3char",
+      "desc": "مخفف Lab 6 / آزمایشگاه نوآوری و دولوپری (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "lb9.ir",
+      "cat": "3char",
+      "desc": "مخفف Lab 9 / آزمایشگاه ابری و سیستم‌های هوشمند (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "nx4.ir",
+      "cat": "3char",
+      "desc": "مخفف Next 4 / پلتفرم آینده و نسل بعدی وب (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "nx5.ir",
+      "cat": "3char",
+      "desc": "مخفف Next 5 / نسل پنج وب و فناوری (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "nx6.ir",
+      "cat": "3char",
+      "desc": "مخفف Next 6 / استارتاپ پیشرو فناوری (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "nx7.ir",
+      "cat": "3char",
+      "desc": "مخفف Next 7 / برند تکنولوژی آینده‌نگر (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "nx8.ir",
+      "cat": "3char",
+      "desc": "مخفف Next 8 / زیرساخت مدرن نرم‌افزاری (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "nx9.ir",
+      "cat": "3char",
+      "desc": "مخفف Next 9 / فناوری نوآورانه و تحول دیجیتال (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "ox6.ir",
+      "cat": "3char",
+      "desc": "مخفف Oxygen / Oxford 6 / برند شیک آکادمیک و سلامت (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "ox7.ir",
+      "cat": "3char",
+      "desc": "مخفف Oxygen / Oxford 7 / برند تکنولوژی پاک (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "ox8.ir",
+      "cat": "3char",
+      "desc": "مخفف Oxygen / Oxford 8 / پلتفرم نوین انرژی و هوش (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "ox9.ir",
+      "cat": "3char",
+      "desc": "مخفف Oxygen / Oxford 9 / برند مدرن و بین‌المللی (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "po4.ir",
+      "cat": "3char book",
+      "desc": "مخفف Podcast 4 / پلتفرم پادکست، صدا و بوک‌کست (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "fm7.ir",
+      "cat": "3char book",
+      "desc": "موج رادیویی FM 7 / رسانه صوتی و پادکست کتاب (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "by6.ir",
+      "cat": "3char",
+      "desc": "مخفف Buy 6 / پلتفرم خرید آنلاین و ایکامرس (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "by7.ir",
+      "cat": "3char",
+      "desc": "مخفف Buy 7 / مارکت‌پلیس سریع و مدرن (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "by9.ir",
+      "cat": "3char",
+      "desc": "مخفف Buy 9 / فروشگاه هوشمند ابری (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "7rd.ir",
+      "cat": "3char book",
+      "desc": "الگوی NLL / هفت کتابخوان و نقد ادبیات هفتگی (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "9tx.ir",
+      "cat": "3char book",
+      "desc": "الگوی NLL / موتور تایپ و نقد کتاب آنلاین (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "wr4.ir",
+      "cat": "3char book",
+      "desc": "کلمه Write 4 / پلتفرم چهارم نویسندگان و کتاب‌نویسی (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "wr5.ir",
+      "cat": "3char book",
+      "desc": "کلمه مخفف Write 5 / پلتفرم مقاله‌نویسی و نشر (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "wr6.ir",
+      "cat": "3char book",
+      "desc": "کلمه مخفف Write 6 / استارتاپ محتوا و ادیتوریال (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "wr7.ir",
+      "cat": "3char book",
+      "desc": "کلمه مخفف Write 7 / هفته‌نامه و مجله نویسندگان (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "rd3.ir",
+      "cat": "3char book",
+      "desc": "کلمه مخفف Read 3 / پلتفرم نسل سه کتابخوان‌ها (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "rd5.ir",
+      "cat": "3char book",
+      "desc": "کلمه مخفف Read 5 / باشگاه خوانش ۵ کتاب یا مجله (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "rd8.ir",
+      "cat": "3char book",
+      "desc": "کلمه مخفف Read 8 / اکوسیستم مطالعه و نقد کتاب (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "tx3.ir",
+      "cat": "3char book",
+      "desc": "کلمه مخفف Text 3 / پلتفرم متن و بلاگ‌پست آنلاین (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "tx8.ir",
+      "cat": "3char book",
+      "desc": "کلمه مخفف Text 8 / سیستم مدیریت متن و محتوا (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "tx9.ir",
+      "cat": "3char book",
+      "desc": "کلمه مخفف Text 9 / موتور تایپ و نقد کتاب (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "cv4.ir",
+      "cat": "3char book",
+      "desc": "معادل Cover 4 یا پلتفرم طراحی جلد کتاب و رزومه (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "hq4.ir",
+      "cat": "3char",
+      "desc": "مخفف HeadQuarters 4 / ستاد مرکزی و هاب استارتاپی (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "hq5.ir",
+      "cat": "3char",
+      "desc": "مخفف HeadQuarters 5 / مرکز فرماندهی کسب‌وکار (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "hq6.ir",
+      "cat": "3char",
+      "desc": "مخفف HeadQuarters 6 / هاب سازمانی و اداری (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "hq8.ir",
+      "cat": "3char",
+      "desc": "مخفف HeadQuarters 8 / هلدینگ و دفتر مرکزی برند (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "lx3.ir",
+      "cat": "3char",
+      "desc": "برند لاکچری و کتابخانه دیجیتال (Lux / Library 3) (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "lx4.ir",
+      "cat": "3char",
+      "desc": "برند تک و کتابخانه‌ای (LX 4 Studio) (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "lx5.ir",
+      "cat": "3char",
+      "desc": "برند پرسرعت نرم‌افزاری و مدرن (LX 5) (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "lx6.ir",
+      "cat": "3char",
+      "desc": "برند سیستمی و تکنولوژی (LX 6 Core) (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "lx7.ir",
+      "cat": "3char",
+      "desc": "برند دیزاین و فریم‌ورک لوکس (LX 7) (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "px7.ir",
+      "cat": "3char",
+      "desc": "برند طراحی، عکاسی و وب Pixel 7 (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "fx8.ir",
+      "cat": "3char",
+      "desc": "استودیو افکت‌های بصری و بازارهای مالی FX 8 (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "rx3.ir",
+      "cat": "3char",
+      "desc": "برند ری‌اکتیو، فریم‌ورک دولوپری یا سلامت RX 3 (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "vx4.ir",
+      "cat": "3char",
+      "desc": "برند شتاب‌یافته و تکنولوژی استارتاپی VX 4 (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "vx5.ir",
+      "cat": "3char",
+      "desc": "پلتفرم نرم‌افزاری و زیرساخت ابری VX 5 (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "vx6.ir",
+      "cat": "3char",
+      "desc": "برندینگ هوش مصنوعی و اتوماسیون VX 6 (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "vx7.ir",
+      "cat": "3char",
+      "desc": "پلتفرم سرعت و مهندسی داده VX 7 (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "vx8.ir",
+      "cat": "3char",
+      "desc": "پلتفرم پرفورمنس بالا VX 8 (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "ux6.ir",
+      "cat": "3char",
+      "desc": "برند لوکس طراحی تجربه کاربری (UX 6 Studio) (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "bx4.ir",
+      "cat": "3char",
+      "desc": "معادل Box 4 / جعبه ابزار نرم‌افزاری و پلتفرم (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "s5x.ir",
+      "cat": "3char",
+      "desc": "برند پرسرعت نرم‌افزاری و تکنولوژی (S5X) (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "hr5.ir",
+      "cat": "3char",
+      "desc": "منابع انسانی HR Tech و پلتفرم‌های استخدامی (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "r7x.ir",
+      "cat": "3char",
+      "desc": "برند پرفورمنس، دولوپری و سخت‌افزار (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "oz4.ir",
+      "cat": "3char",
+      "desc": "الگوی LLN، برندینگ جالب و فانتزی (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "bokx.ir",
+      "cat": "book",
+      "desc": "۴ حرف خالص لاتین، ترکیب Book + X برای پلتفرم کتاب (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "rooq.ir",
+      "cat": "book",
+      "desc": "۴ حرف خالص، ریشه «ورق» و «روق»، ادبی و نشریاتی (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "b0ok.ir",
+      "cat": "book",
+      "desc": "لیت‌اسپیک مستقیم واژه Book با عدد صفر، ۴ کاراکتری (توسط کاربران پس از معرفی در این سامانه ثبت و خریداری شد)",
+      "status": "taken",
+      "purchased_after_intro": true
+    },
+    {
+      "name": "readr.ir",
+      "cat": "book",
+      "desc": "معادل Reader / کتابخوان (در استعلام جدید ثبت قطعی شد)",
+      "status": "taken"
+    },
+    {
+      "name": "readup.ir",
+      "cat": "book",
+      "desc": "ترکیب Read + Up (توسط دیگران خریداری شد)",
+      "status": "taken"
+    },
+    {
+      "name": "novlr.ir",
+      "cat": "book",
+      "desc": "برند ۵ حرفی رمان و نقد داستان (توسط خریداران تصاحب شد)",
+      "status": "taken"
+    },
+    {
+      "name": "shelfx.ir",
+      "cat": "book",
+      "desc": "شلف‌اکس قفسه کتاب دیجیتال (ثبت قطعی شد)",
+      "status": "taken"
+    },
+    {
+      "name": "boklog.ir",
+      "cat": "book",
+      "desc": "وبلاگ کتاب BookLog (ثبت قطعی شد)",
+      "status": "taken"
+    },
+    {
+      "name": "w4r.ir",
+      "cat": "3char",
+      "desc": "کلمه معنادار War (جنگ، گیمینگ، امنیت)",
+      "status": "taken"
+    },
+    {
+      "name": "g1k.ir",
+      "cat": "3char",
+      "desc": "کلمه لیت‌اسپیک Geek (دولوپری و تکنولوژی)",
+      "status": "taken"
+    },
+    {
+      "name": "v1x.ir",
+      "cat": "3char",
+      "desc": "نسخه یک V1X (محصولات نرم‌افزاری و AI)",
+      "status": "taken"
+    },
+    {
+      "name": "ux4.ir",
+      "cat": "3char",
+      "desc": "برند تجربه کاربری UX (ثبت قطعی شد)",
+      "status": "taken"
+    },
+    {
+      "name": "kl6.ir",
+      "cat": "3char",
+      "desc": "الگوی LLN (توسط خریداران ثبت شد)",
+      "status": "taken"
+    },
+    {
+      "name": "f5z.ir",
+      "cat": "3char",
+      "desc": "الگوی LNL (توسط خریداران ثبت شد)",
+      "status": "taken"
+    },
+    {
+      "name": "q6v.ir",
+      "cat": "3char",
+      "desc": "الگوی LNL (توسط خریداران ثبت شد)",
+      "status": "taken"
+    },
+    {
+      "name": "y8w.ir",
+      "cat": "3char",
+      "desc": "الگوی LNL (ثبت قطعی شد)",
+      "status": "taken"
+    },
+    {
+      "name": "5ij.ir",
+      "cat": "3char",
+      "desc": "الگوی NLL (ثبت قطعی شد)",
+      "status": "taken"
+    },
+    {
+      "name": "6kl.ir",
+      "cat": "3char",
+      "desc": "الگوی NLL (ثبت قطعی شد)",
+      "status": "taken"
+    },
+    {
+      "name": "8op.ir",
+      "cat": "3char",
+      "desc": "الگوی NLL (ثبت قطعی شد)",
+      "status": "taken"
+    },
+    {
+      "name": "3jk.ir",
+      "cat": "3char",
+      "desc": "الگوی NLL (ثبت قطعی شد)",
+      "status": "taken"
+    },
+    {
+      "name": "y34.ir",
+      "cat": "3char",
+      "desc": "الگوی LNN (ثبت قطعی شد)",
+      "status": "taken"
+    },
+    {
+      "name": "56z.ir",
+      "cat": "3char",
+      "desc": "الگوی NNL (ثبت قطعی شد)",
+      "status": "taken"
+    }
+  ]
+}
